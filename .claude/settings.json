@@ -1,3 +1,11 @@
 {
-  "skipWorkflowUsageWarning": true
+  "skipWorkflowUsageWarning": true,
+  "inheritGlobal": "C:\\Users\\gunvs\\.claude\\settings.json",
+  "projectName": "antigravity",
+  "defaultSkills": ["code-review", "peer-review", "simplify", "loop", "run"],
+  "motionEnabled": true,
+  "knowledgeBase": {"enabled": true, "sourceDirectories": [".", "my-business-brain", "templates"]},
+  "backupDir": "/tmp",
+  "autoBackup": true,
+  "githubRemote": "https://github.com/gunvsin/AI-Workspace.git"
 }
