@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Business Brain – Live Dashboard</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+<style>
+  body{font-family:Inter,system-ui,sans-serif;background:#f5f7fa;color:#2a2a2a;margin:0;padding:2rem;}
+  h1{font-size:2rem;margin-bottom:1rem;}
+  .card{background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1);margin-bottom:1rem;}
+  a{color:#0066cc;}
+  #notes{white-space:pre-wrap;background:#fafafa;padding:1rem;border-radius:4px;max-height:400px;overflow:auto;}
+</style>
+</head>
+<body>
+  <h1>My Business Brain – Live Dashboard</h1>
+  <div class="card">
+    <p>Live view of your memory notes (updated via the API).</p>
+  </div>
+  <div class="card">
+    <h2>Memory Notes</h2>
+    <div id="notes">Loading…</div>
+  </div>
+  <div class="card">
+    <h2>UX Workflow</h2>
+    <p>The full account‑creation & personalisation flow is visualised here:</p>
+    <a href="/tmp/ux_workflow.html" target="_blank">Open UX Workflow diagram</a>
+  </div>
+  <div class="card">
+    <h2>Documentation & Guides</h2>
+    <ul>
+      <li><a href="https://github.com/coleam00/second-brain-starter" target="_blank">Second‑Brain Starter repo</a></li>
+      <li><a href="https://docs.anthropic.com/en/docs/claude-code" target="_blank">Claude Code docs</a></li>
+    </ul>
+  </div>
+  <div class="card">
+    <h2>Next Steps</h2>
+    <ol>
+      <li>Restart Claude Code to activate the new model (claude‑sonnet‑5‑5).</li>
+      <li>Run the PRD generator: <code>/create-second-brain-prd my-business-brain/.claude/skills/create-second-brain-prd/my-business-requirements.md</code></li>
+      <li>Start the API server: <code>python .claude/scripts/api.py</code> (keep this terminal open).</li>
+      <li>Refresh this page to see live notes.</li>
+    </ol>
+  </div>
+<script>
+  async function loadNotes() {
+    try {
+      const resp = await fetch("/api/memory");
+      const data = await resp.json();
+      document.getElementById('notes').textContent = data.notes.join("\n");
+    } catch (e) {
+      document.getElementById('notes').textContent = "Error loading notes: " + e;
+    }
+  }
+  loadNotes();
+  setInterval(loadNotes, 15000); // refresh every 15s
+</script>
+</body>
+</html>

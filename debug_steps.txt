@@ -1,0 +1,8 @@
+1. Unset conflicting vars:
+   Remove-Item Env:ANTHROPIC_AUTH_TOKEN
+   Remove-Item Env:ANTHROPIC_MODEL
+2. Set required vars:
+   $Env:ANTHROPIC_BASE_URL = "http://localhost:20128/v1"
+   $Env:ANTHROPIC_API_KEY = "sk-f76ff83517ea3bdf-3e220f-cae8f98c"
+   $Env:ANTHROPIC_MODEL = "auto"
+3. Launch Claude Code from any folder (e.g., my-business-brain)

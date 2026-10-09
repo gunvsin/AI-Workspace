@@ -1,0 +1,25 @@
+# Brain Configuration
+# Edited via the frontend — this file drives .claude/rules/ regeneration.
+
+capture:
+  auto_ingest: true        # /ingest runs automatically on new inbox files
+  quiet_hours: "22:00-07:00"
+
+formatting:
+  style: "concise"         # concise | detailed
+  voice: "direct"          # direct | friendly | formal
+  emoji: false
+
+ingest:
+  auto_tag: true           # infer tags from content
+  cross_link: true         # generate [[wiki links]]
+  summarize_length: "medium"  # short | medium | long
+
+notifications:
+  daily_brief: true
+  brief_time: "09:00"
+
+integrations:
+  telegram: false
+  voice_capture: false
+  gmail: false
