@@ -52,8 +52,8 @@ export async function GET() {
 export async function POST(req: Request) {
   try {
     const body = await req.json()
-    const { yaml } = await import('yaml')
-    const text = yaml.stringify(body)
+    const { stringify } = await import('yaml')
+    const text = stringify(body)
     const cfgPath = join(brainRoot, 'config.yaml')
     writeFileSync(cfgPath, text)
     return NextResponse.json({ ok: true })
