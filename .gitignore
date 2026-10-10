@@ -1,0 +1,16 @@
+# secrets & local config
+.env*
+ConfigFile
+debug_steps.txt
+
+# temp artifacts
+*.tmp.*
+clm_*
+
+# stray files
+Ledgity-Sovereign-Ledgity-Sovereign-Ledger
+
+# tooling dirs
+temp-starter/
+node_modules/
+.next/
