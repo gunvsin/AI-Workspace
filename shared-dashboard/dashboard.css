@@ -1,0 +1,116 @@
+/* Live Dashboard — animated explainers (dependency-free) */
+
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --panel-2: #1c2330;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --accent: #58a6ff;
+  --ok: #3fb950;
+  --warn: #d29922;
+  --radius: 10px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid #21262d;
+}
+
+.topbar h1 { font-size: 18px; margin: 0; }
+
+.status {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--panel-2);
+  color: var(--muted);
+  transition: color 0.3s, background 0.3s;
+}
+.status.live { color: var(--ok); }
+.status.error { color: #f85149; }
+
+main { padding: 20px; max-width: 1100px; margin: 0 auto; }
+
+/* --- metric cards --- */
+.metrics {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.metric {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 16px;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: rise 0.4s ease backwards;
+}
+.metric:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.35); }
+.metric h3 { margin: 0 0 6px; font-size: 13px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.metric .value { font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.metric .delta { font-size: 12px; margin-top: 4px; }
+.metric .delta.up { color: var(--ok); }
+.metric .delta.down { color: #f85149; }
+.metric .spark { display: block; margin-top: 10px; height: 32px; width: 100%; }
+
+/* --- explainer panels --- */
+.explainers { display: grid; gap: 10px; margin-top: 16px; }
+
+.explainer {
+  background: var(--panel);
+  border-left: 3px solid var(--accent);
+  border-radius: 6px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.3s ease;
+  padding: 0 16px;
+}
+.explainer.open { max-height: 240px; opacity: 1; padding: 12px 16px; }
+.explainer h4 { margin: 0 0 4px; font-size: 14px; }
+.explainer p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.5; }
+.explainer p.ai { color: var(--text); white-space: pre-wrap; }
+
+/* --- ask box --- */
+.ask { margin-top: 24px; background: var(--panel); border-radius: var(--radius); padding: 16px; }
+.ask h2 { font-size: 14px; margin: 0 0 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+#ask-form { display: flex; gap: 8px; }
+#ask-input {
+  flex: 1;
+  background: var(--panel-2);
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  color: var(--text);
+  padding: 9px 12px;
+  font-size: 14px;
+}
+#ask-input:focus { outline: 1px solid var(--accent); }
+#ask-form button {
+  background: var(--accent);
+  border: 0;
+  border-radius: 8px;
+  color: #0d1117;
+  font-weight: 600;
+  padding: 9px 16px;
+  cursor: pointer;
+}
+.answer { font-size: 14px; min-height: 1.4em; margin: 12px 0 0; line-height: 1.5; }
+.answer.thinking::after { content: "…"; animation: dots 1s steps(3) infinite; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes dots { 0% { content: ""; } 33% { content: "."; } 66% { content: ".."; } 100% { content: "..."; } }

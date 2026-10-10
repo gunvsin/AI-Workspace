@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Live Dashboard — Animated Explainers</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Live Dashboard</h1>
+    <div class="status" id="status" role="status">demo mode</div>
+  </header>
+
+  <main>
+    <!-- Metric cards populate from the data endpoint (or demo mode) -->
+    <section class="metrics" id="metrics" aria-label="Metrics"></section>
+
+    <!-- Animated explainer panel: one per metric, toggled by click -->
+    <section class="explainers" id="explainers" aria-label="Explainers"></section>
+
+    <!-- AI explainer box: posts to /api/explain (or answers locally in demo mode) -->
+    <section class="ask">
+      <h2>Ask the dashboard</h2>
+      <form id="ask-form">
+        <input id="ask-input" type="text" placeholder="Why did revenue spike?" autocomplete="off" />
+        <button type="submit">Explain</button>
+      </form>
+      <p class="answer" id="answer" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
