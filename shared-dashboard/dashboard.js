@@ -53,19 +53,23 @@
   var askInput = document.getElementById("ask-input");
   var answerEl = document.getElementById("answer");
 
-  function sparkline(points) {
-    var w = 120, h = 32, max = Math.max.apply(null, points), min = Math.min.apply(null, points);
-    var span = max - min || 1;
-    var step = w / (points.length - 1);
-    var coords = points.map(function (p, i) {
-      var x = (i * step).toFixed(1);
-      var y = (h - 3 - ((p - min) / span) * (h - 6)).toFixed(1);
-      return x + "," + y;
-    });
+  function bars(points) {
+    var max = Math.max.apply(null, points) || 1;
     return (
-      '<svg class="spark" viewBox="0 0 ' + w + " " + h + '" preserveAspectRatio="none">' +
-      '<polyline points="' + coords.join(" ") + '" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>' +
-      "</svg>"
+      '<div class="bars" aria-hidden="true">' +
+      points
+        .map(function (p, i) {
+          var h = Math.max(6, (p / max) * 100);
+          return (
+            '<span style="height:' +
+            h +
+            "%;animation-delay:" +
+            i * 40 +
+            'ms"></span>'
+          );
+        })
+        .join("") +
+      "</div>"
     );
   }
 
@@ -80,7 +84,7 @@
         "<h3>" + m.label + "</h3>" +
         '<div class="value">' + m.value + "</div>" +
         '<div class="delta ' + (m.up ? "up" : "down") + '">' + m.delta + "</div>" +
-        sparkline(m.spark);
+        bars(m.spark);
       card.addEventListener("click", function () { toggleExplainer(m.id); });
       metricsEl.appendChild(card);
 
@@ -150,4 +154,5 @@
   });
 
   fetchMetrics();
+  setInterval(fetchMetrics, 30000); // keep the dashboard live
 })();

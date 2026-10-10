@@ -55,6 +55,26 @@ Rule: the dashboard never holds keys. The host project's route owns auth,
 reads its own env, and returns plain text — same pattern as my-business-brain's
 `app/api/*` routes.
 
+## Animated charts (motion)
+
+Each metric shows an animated bar chart. Bars grow on load with staggered
+delays, and the panel slides open when you click a card — pure CSS, no
+animation library.
+
+## Using Claude Motion (beta)
+
+Motion is a **claude.ai editor feature**, not a repo API:
+
+1. Type `/motion` in the Claude message box → opens the Motion option.
+2. Paste a chart/diagram (or upload a CSV of your metrics) and prompt
+   "animate this" or "turn this quarterly report into a 30-second explainer".
+3. Adjust in the editor, then **download the MP4 file** and paste it into
+   presentations or onboarding walkthroughs.
+
+Motion animates *your* content in Claude; the dashboard above serves it live
+inside your project. They complement each other: Motion for decks, the shared
+dashboard for the running app.
+
 ## Future projects
 
 Same three files, same two endpoints. Anything that can serve HTTP can host it
