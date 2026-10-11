@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Expanding into new market",
+    "dilemma": "Should we enter a new geographic market with $200k investment when current market is saturated?",
+    "expected_biases": ["Optimism Bias", "Sunk Cost Fallacy"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  },
+  {
+    "id": 2,
+    "title": "Hiring vs automation",
+    "dilemma": "Should we hire 3 new engineers or invest in automation tooling that may not pay off for 18 months?",
+    "expected_biases": ["Recency Effect", "Confirmation Bias"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  },
+  {
+    "id": 3,
+    "title": "Price increase decision",
+    "dilemma": "Should we raise prices 15% when churn is already above industry average?",
+    "expected_biases": ["Optimism Bias", "Sunk Cost Fallacy"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  },
+  {
+    "id": 4,
+    "title": "Pivot or persevere",
+    "dilemma": "Product has 18 months of runway with flat growth — pivot or continue current trajectory?",
+    "expected_biases": ["Sunk Cost Fallacy", "Confirmation Bias"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  },
+  {
+    "id": 5,
+    "title": "Acquisition offer",
+    "dilemma": "Competitor offers acquisition at 4x revenue — accept or keep growing independently?",
+    "expected_biases": ["Recency Effect", "Optimism Bias"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  },
+  {
+    "id": 6,
+    "title": "New product line",
+    "dilemma": "Launch new product line requiring 40% of engineering capacity when core product needs maintenance?",
+    "expected_biases": ["Optimism Bias", "Confirmation Bias"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  },
+  {
+    "id": 7,
+    "title": "Remote vs office",
+    "dilemma": "Should we mandate return-to-office when 60% of team is remote and productivity is stable?",
+    "expected_biases": ["Recency Effect", "Sunk Cost Fallacy"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  },
+  {
+    "id": 8,
+    "title": "Tech stack rewrite",
+    "dilemma": "Rewrite core system in new framework when current system works but is hard to maintain?",
+    "expected_biases": ["Sunk Cost Fallacy", "Optimism Bias"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  },
+  {
+    "id": 9,
+    "title": "Investor funding",
+    "dilemma": "Accept VC funding with 18-month growth targets when bootstrapping is sustainable but slow?",
+    "expected_biases": ["Optimism Bias", "Recency Effect"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  },
+  {
+    "id": 10,
+    "title": "Feature cut",
+    "dilemma": "Cut a popular feature that 30% of users rely on to reduce technical debt?",
+    "expected_biases": ["Sunk Cost Fallacy", "Confirmation Bias"],
+    "expected_outcomes": ["Nominal", "Worst-Case", "Optimal"]
+  }
+]

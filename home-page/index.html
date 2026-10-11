@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI-Workspace — Second Brain</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="design.css" />
+  </head>
+  <body class="obsidian">
+    <div class="layout">
+      <!-- LEFT PANE: capture + notes + decision journal -->
+      <aside class="pane pane-left">
+        <header class="pane-header">
+          <h1 class="brand">Second Brain</h1>
+          <nav class="nav">
+            <a href="#" class="nav-item active">Dashboard</a>
+            <a href="#" class="nav-item">Notes</a>
+            <a href="#" class="nav-item">Decisions</a>
+            <a href="#" class="nav-item">Entities</a>
+          </nav>
+        </header>
+
+        <section class="capture">
+          <h2 class="section-title">Capture</h2>
+          <form id="capture-form">
+            <textarea
+              id="capture-input"
+              placeholder="Drop a thought here..."
+              rows="4"
+            ></textarea>
+            <button type="submit" class="btn btn-primary">Add Note</button>
+          </form>
+          <p class="capture-hint">Demo mode — saved locally. Wire POST /api/capture for live save.</p>
+        </section>
+
+        <section class="notes">
+          <h2 class="section-title">Recent Notes</h2>
+          <ul id="notes-list" class="notes-list">
+            <li class="note-item" data-id="1">
+              <div class="note-meta">
+                <span class="note-time">2h ago</span>
+                <span class="note-tags">#capture</span>
+              </div>
+              <div class="note-title">Review ai-workspace setup</div>
+            </li>
+            <li class="note-item" data-id="2">
+              <div class="note-meta">
+                <span class="note-time">5h ago</span>
+                <span class="note-tags">#decision</span>
+              </div>
+              <div class="note-title">Bias check on Q4 roadmap</div>
+            </li>
+            <li class="note-item" data-id="3">
+              <div class="note-meta">
+                <span class="note-time">1d ago</span>
+                <span class="note-tags">#idea</span>
+              </div>
+              <div class="note-title">Split-screen dual-pane layout</div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="pinned">
+          <h2 class="section-title">Working Set</h2>
+          <div class="empty-state">No pinned notes</div>
+        </section>
+      </aside>
+
+      <!-- RIGHT PANE: dashboard + animated explainers -->
+      <main class="pane pane-right">
+        <header class="pane-header">
+          <h1 class="brand">Dashboard</h1>
+          <div class="status" id="status">demo mode</div>
+        </header>
+
+        <section class="metrics" id="metrics">
+          <!-- injected by shared-dashboard.js -->
+        </section>
+
+        <section class="explainers" id="explainers"></section>
+
+        <section class="ask">
+          <h2 class="section-title">Ask the workspace</h2>
+          <form id="ask-form">
+            <input
+              id="ask-input"
+              type="text"
+              placeholder="Why did capture spike?"
+              autocomplete="off"
+            />
+            <button type="submit" class="btn btn-accent">Explain</button>
+          </form>
+          <p class="answer" id="answer" aria-live="polite"></p>
+        </section>
+
+        <section class="decision-journal">
+          <h2 class="section-title">Decision Journal</h2>
+          <div class="journal-item">
+            <div class="journal-meta">
+              <span class="journal-date">Oct 10</span>
+              <span class="journal-tags">#pricing #sunk-cost</span>
+            </div>
+            <p class="journal-body">
+              Proceeded with Oct 6 pricing change despite early churn risk —
+              checked: is revenue pressure real or sunk-cost bias? Revenue +12%,
+              churn flat → validated.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+  <script src="../shared-dashboard/dashboard.js"></script>
+</html>
