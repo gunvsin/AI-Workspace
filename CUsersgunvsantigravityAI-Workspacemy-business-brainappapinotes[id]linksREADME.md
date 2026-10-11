@@ -1,0 +1,1 @@
+Backlink endpoint file: my-business-brain/app/api/notes/[id]/links/route.ts — implement GET (backlinks + outlinks) + POST (create with auth + ownership) + DELETE (with auth). Uses NoteRelation model + userId guard.
