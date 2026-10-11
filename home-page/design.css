@@ -403,6 +403,24 @@ body {
   color: var(--text);
 }
 
+.entity-section {
+  margin-top: 20px;
+}
+
+.entity-graph {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.entity-graph canvas {
+  display: block;
+  width: 100%;
+  height: 420px;
+}
+
 /* --- decision journal --- */
 .decision-journal {
   margin-top: 20px;
