@@ -1,11 +1,12 @@
 // Entity graph — force-directed layout, zero deps.
 // Renders typed objects (person / budget / blocker / project / topic)
 // and their relations (blocks / funds / owns / works-for).
+// Live mode: GET /api/entities -> { nodes, links }.
+// Demo mode: built-in sample graph when endpoint unreachable.
 (function () {
   "use strict";
 
-  // --- demo graph (replace with GET /api/entities) ---
-  var NODES = [
+  var DEMO_NODES = [
     { id: "user",    label: "You",          kind: "person"  },
     { id: "budget",  label: "Q4 Budget",    kind: "budget"  },
     { id: "roadmap", label: "Roadmap",      kind: "project" },
@@ -15,7 +16,7 @@
     { id: "team",    label: "Team",         kind: "person"  },
     { id: "market",  label: "Market",       kind: "topic"   },
   ];
-  var LINKS = [
+  var DEMO_LINKS = [
     { source: "user",    target: "roadmap", type: "owns" },
     { source: "user",    target: "budget",  type: "owns" },
     { source: "budget",  target: "hiring",  type: "funds" },
@@ -34,14 +35,14 @@
     topic:   "#8A8A8A",
   };
 
-  function init(canvas) {
+  function init(canvas, nodesData, linksData) {
     var ctx = canvas.getContext("2d");
     var W = (canvas.width = canvas.clientWidth || 640);
     var H = (canvas.height = canvas.clientHeight || 420);
 
     // initial positions: circle
-    var nodes = NODES.map(function (n, i) {
-      var a = (i / NODES.length) * Math.PI * 2;
+    var nodes = nodesData.map(function (n, i) {
+      var a = (i / nodesData.length) * Math.PI * 2;
       return {
         id: n.id, label: n.label, kind: n.kind,
         x: W / 2 + Math.cos(a) * 160,
@@ -51,7 +52,7 @@
     });
     var byId = {};
     nodes.forEach(function (n) { byId[n.id] = n; });
-    var links = LINKS.map(function (l) {
+    var links = linksData.map(function (l) {
       return { source: byId[l.source], target: byId[l.target], type: l.type };
     });
 
@@ -126,7 +127,18 @@
     var canvas = document.createElement("canvas");
     canvas.id = "entity-canvas";
     mountEl.appendChild(canvas);
-    init(canvas);
+
+    // try live endpoint; fall back to demo graph
+    fetch("/api/entities")
+      .then(function (r) { if (!r.ok) throw new Error("not live"); return r.json(); })
+      .then(function (data) {
+        var status = document.getElementById("status");
+        if (status) { status.textContent = "live"; status.classList.add("live"); }
+        init(canvas, data.nodes, data.links);
+      })
+      .catch(function () {
+        init(canvas, DEMO_NODES, DEMO_LINKS);
+      });
   }
 
   if (document.readyState === "loading") {
