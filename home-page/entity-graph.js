@@ -126,6 +126,8 @@
     if (!mountEl) return;
     var canvas = document.createElement("canvas");
     canvas.id = "entity-canvas";
+    canvas.setAttribute("role", "img");
+    canvas.setAttribute("aria-label", "Entity relationship graph");
     mountEl.appendChild(canvas);
 
     // try live endpoint; fall back to demo graph

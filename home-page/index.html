@@ -19,24 +19,26 @@
   <body class="obsidian">
     <div class="layout">
       <!-- LEFT PANE: capture + notes + decision journal -->
-      <aside class="pane pane-left">
+      <aside class="pane pane-left" role="region" aria-label="Left panel">
         <header class="pane-header">
           <h1 class="brand">Second Brain</h1>
-          <nav class="nav">
-            <a href="#" class="nav-item active">Dashboard</a>
-            <a href="#" class="nav-item">Notes</a>
-            <a href="#" class="nav-item">Decisions</a>
-            <a href="#" class="nav-item">Entities</a>
+          <nav class="nav" aria-label="Main">
+            <a href="#" class="nav-item active" aria-label="Dashboard">Dashboard</a>
+            <a href="#" class="nav-item" aria-label="Notes">Notes</a>
+            <a href="#" class="nav-item" aria-label="Decisions">Decisions</a>
+            <a href="#" class="nav-item" aria-label="Entities">Entities</a>
           </nav>
         </header>
 
-        <section class="capture">
+        <section class="capture" role="region" aria-label="Capture">
           <h2 class="section-title">Capture</h2>
           <form id="capture-form">
+            <label for="capture-input" class="sr-only">Capture note</label>
             <textarea
               id="capture-input"
               placeholder="Drop a thought here..."
               rows="4"
+              aria-label="Capture note input"
             ></textarea>
             <button type="submit" class="btn btn-primary">Add Note</button>
           </form>
@@ -77,7 +79,7 @@
       </aside>
 
       <!-- RIGHT PANE: dashboard + animated explainers -->
-      <main class="pane pane-right">
+      <main class="pane pane-right" role="region" aria-label="Dashboard">
         <header class="pane-header">
           <h1 class="brand">Dashboard</h1>
           <div class="status" id="status">demo mode</div>
