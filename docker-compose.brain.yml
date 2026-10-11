@@ -1,7 +1,7 @@
 services:
   # Local LLM — private, zero-cost inference (BYO model)
   ollama:
-    image: ollama/ollama:0.9.9
+    image: ollama/ollama:latest
     container_name: second-brain-ollama
     ports:
       - "11434:11434"
