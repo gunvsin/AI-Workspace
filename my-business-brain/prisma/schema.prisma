@@ -44,7 +44,23 @@ model Note {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@index([userId])
+  @@index([userId, createdAt])
+
+  // Backlinks (Obsidian-style internal links)
+  linksFrom NoteRelation[] @relation("from")
+  linksTo   NoteRelation[] @relation("to")
+}
+
+model NoteRelation {
+  id         String @id @default(cuid())
+  fromNoteId String
+  toNoteId   String
+  fromNote   Note   @relation("from", fields: [fromNoteId], references: [id])
+  toNote     Note   @relation("to", fields: [toNoteId], references: [id])
+  type       String @default("links")
+
+  @@unique([fromNoteId, toNoteId, type])
+  @@index([toNoteId])
 }
 
 model UserConfig {
