@@ -1,0 +1,34 @@
+services:
+  # Local LLM — private, zero-cost inference (BYO model)
+  ollama:
+    image: ollama/ollama:latest
+    container_name: second-brain-ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+
+  # Postgres + pgvector — embeddings + structured data
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: second-brain-db
+    environment:
+      POSTGRES_USER: brain
+      POSTGRES_PASSWORD: brain-local
+      POSTGRES_DB: business_brain
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  # Whisper worker — audio capture → transcript (CPU; GPU optional)
+  whisper:
+    image: on whisper-standalone  # see: ghcr.io/ggerganov/whisper.cpp
+    # alternative: build local Dockerfile with faster-whisper
+    profiles: ["audio"]  # opt-in: docker compose --profile audio up
+
+volumes:
+  ollama-data:
+  db-data:
