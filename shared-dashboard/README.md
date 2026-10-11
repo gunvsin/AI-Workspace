@@ -55,6 +55,18 @@ Rule: the dashboard never holds keys. The host project's route owns auth,
 reads its own env, and returns plain text — same pattern as my-business-brain's
 `app/api/*` routes.
 
+## Live in my-business-brain
+
+`my-business-brain/` serves both endpoints (auth-gated, real Prisma data):
+
+```
+GET  /api/dashboard/metrics
+POST /api/dashboard/explain
+```
+
+Copy `shared-dashboard/*` into `my-business-brain/public/dashboard/` to
+serve it live, then adjust `dashboard.js` fetch targets accordingly.
+
 ## Animated charts (motion)
 
 Each metric shows an animated bar chart. Bars grow on load with staggered
