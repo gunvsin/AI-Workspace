@@ -1,6 +1,7 @@
 import { auth } from '@/lib/auth'
 import { NextResponse } from 'next/server'
 import prisma from '@/lib/prisma'
+import { scrubNote } from '@/lib/pii'
 
 export const dynamic = 'force-dynamic'
 
@@ -14,7 +15,7 @@ export async function GET() {
 
   const userId = session.user.id
 
-  // All notes with their entities (typed objects)
+  // All notes with their entities (typed objects) — PII scrubbed
   const notes = await prisma.note.findMany({
     where: { userId },
     select: {
@@ -32,12 +33,13 @@ export async function GET() {
   const links = []
   const tagIndex = new Map()
 
-  notes.forEach((note, i) => {
+  notes.forEach((note) => {
+    const safe = scrubNote(note)
     nodes.push({
-      id: note.id,
-      label: note.title,
-      kind: note.pinned ? 'project' : 'topic',
-      noteId: note.id,
+      id: safe.id,
+      label: safe.title,
+      kind: safe.pinned ? 'project' : 'topic',
+      noteId: safe.id,
     })
 
     note.tags.forEach((tag) => {
