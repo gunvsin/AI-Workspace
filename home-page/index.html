@@ -8,6 +8,9 @@
       content="Second brain that interrogates your own reasoning — bias detection, pre-mortems, decision journals, local-first."
     />
     <title>Second Brain — Cognitive OS</title>
+    <meta property="og:title" content="Second Brain — Cognitive OS" />
+    <meta property="og:description" content="Bias detection, pre-mortems, decision journals, local-first." />
+    <meta property="og:type" content="website" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -74,7 +77,22 @@
 
         <section class="pinned">
           <h2 class="section-title">Working Set</h2>
-          <div class="empty-state">No pinned notes</div>
+          <ul class="notes-list">
+            <li class="note-item" data-id="p1">
+              <div class="note-meta">
+                <span class="note-time">pinned</span>
+                <span class="note-tags">#pricing #sunk-cost</span>
+              </div>
+              <div class="note-title">Oct 6 pricing change — validated</div>
+            </li>
+            <li class="note-item" data-id="p2">
+              <div class="note-meta">
+                <span class="note-time">pinned</span>
+                <span class="note-tags">#hiring #blocker</span>
+              </div>
+              <div class="note-title">Hiring blocks roadmap delivery</div>
+            </li>
+          </ul>
         </section>
       </aside>
 
@@ -154,4 +172,27 @@
   </body>
   <script src="dashboard-live.js"></script>
   <script src="entity-graph.js"></script>
+  <script>
+  // Demo-mode capture: adds note to Recent Notes (local only, no server)
+  (function () {
+    var form = document.getElementById("capture-form");
+    var input = document.getElementById("capture-input");
+    var list = document.getElementById("notes-list");
+    if (!form || !input || !list) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var text = input.value.trim();
+      if (!text) return;
+      var li = document.createElement("li");
+      li.className = "note-item";
+      li.setAttribute("data-id", "demo-" + Date.now());
+      li.innerHTML =
+        '<div class="note-meta"><span class="note-time">just now</span><span class="note-tags">#capture</span></div>' +
+        '<div class="note-title"></div>';
+      li.querySelector(".note-title").textContent = text;
+      list.prepend(li);
+      input.value = "";
+    });
+  })();
+  </script>
 </html>
