@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0F0F0F;
+  --panel: #161616;
+  --panel-2: #1F1F1F;
+  --border: #2C2C2C;
+  --text: #E6E6E6;
+  --muted: #9A9A9A;
+  --accent: #7A8BFF;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
