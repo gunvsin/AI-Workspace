@@ -1,0 +1,1614 @@
+{
+  "fetchedAt": "2026-10-16T02:01:17.838Z",
+  "data": [
+    {
+      "slug": "open-inference/fp4",
+      "displayName": "open-inference/fp4",
+      "modelCount": 7,
+      "totalTokens": 57846510924907,
+      "totalRequests": 2130592860,
+      "popularityRank": 1
+    },
+    {
+      "slug": "deepinfra/fp8",
+      "displayName": "deepinfra/fp8",
+      "modelCount": 20,
+      "totalTokens": 21468523551658,
+      "totalRequests": 262637352,
+      "popularityRank": 2
+    },
+    {
+      "slug": "darkbloom/fp4",
+      "displayName": "darkbloom/fp4",
+      "modelCount": 4,
+      "totalTokens": 11736042188449,
+      "totalRequests": 181214042,
+      "popularityRank": 3
+    },
+    {
+      "slug": "nvidia",
+      "displayName": "NVIDIA",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": true,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf",
+        "privacyPolicyURL": "https://www.nvidia.com/en-us/about-nvidia/privacy-policy/"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.nvidia.com/en-us/&size=256",
+      "modelCount": 8,
+      "totalTokens": 8111774489761,
+      "totalRequests": 76547406,
+      "popularityRank": 4
+    },
+    {
+      "slug": "makora/fp8",
+      "displayName": "makora/fp8",
+      "modelCount": 1,
+      "totalTokens": 7879706914245,
+      "totalRequests": 71748799,
+      "popularityRank": 5
+    },
+    {
+      "slug": "openai",
+      "displayName": "OpenAI",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.openai.com/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://openai.com/policies/row-terms-of-use/",
+        "privacyPolicyURL": "https://openai.com/policies/privacy-policy/"
+      },
+      "iconUrl": "/images/icons/OpenAI.svg",
+      "modelCount": 78,
+      "totalTokens": 7861492687824,
+      "totalRequests": 453782373,
+      "popularityRank": 6
+    },
+    {
+      "slug": "azure",
+      "displayName": "Azure",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.azure.com/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.microsoft.com/en-us/legal/terms-of-use?oneroute=true",
+        "privacyPolicyURL": "https://www.microsoft.com/en-us/privacy/privacystatement"
+      },
+      "iconUrl": "/images/icons/Azure.svg",
+      "modelCount": 55,
+      "totalTokens": 7474622303751,
+      "totalRequests": 824838838,
+      "popularityRank": 7
+    },
+    {
+      "slug": "relace",
+      "displayName": "Relace",
+      "statusPageUrl": "https://status.relace.ai",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.relace.ai/terms-of-use",
+        "privacyPolicyURL": "https://www.relace.ai/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://relace.ai&size=256",
+      "modelCount": 3,
+      "totalTokens": 5917623334596,
+      "totalRequests": 112776074,
+      "popularityRank": 8
+    },
+    {
+      "slug": "amazon-bedrock",
+      "displayName": "Amazon Bedrock",
+      "headquarters": "US",
+      "statusPageUrl": "https://health.aws.amazon.com/health/status",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://aws.amazon.com/service-terms/",
+        "privacyPolicyURL": "https://aws.amazon.com/privacy"
+      },
+      "iconUrl": "/images/icons/Bedrock.svg",
+      "modelCount": 5,
+      "totalTokens": 5847860641934,
+      "totalRequests": 46989121,
+      "popularityRank": 9
+    },
+    {
+      "slug": "google-vertex/global",
+      "displayName": "google-vertex/global",
+      "modelCount": 25,
+      "totalTokens": 5424473210751,
+      "totalRequests": 189422913,
+      "popularityRank": 10
+    },
+    {
+      "slug": "google-ai-studio",
+      "displayName": "Google AI Studio",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://cloud.google.com/terms/",
+        "privacyPolicyURL": "https://cloud.google.com/terms/cloud-privacy-notice"
+      },
+      "iconUrl": "/images/icons/GoogleAIStudio.svg",
+      "modelCount": 21,
+      "totalTokens": 4332370454526,
+      "totalRequests": 423499009,
+      "popularityRank": 11
+    },
+    {
+      "slug": "meta",
+      "displayName": "Meta",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://ai.developer.meta.com/legal/terms-of-service",
+        "privacyPolicyURL": "https://www.facebook.com/privacy/policy/"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://ai.meta.com/&size=256",
+      "modelCount": 8,
+      "totalTokens": 3767258835643,
+      "totalRequests": 50469003,
+      "popularityRank": 12
+    },
+    {
+      "slug": "typesafe",
+      "displayName": "TypeSafe",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://typesafe.ai/legal/terms",
+        "privacyPolicyURL": "https://typesafe.ai/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://typesafe.ai/&size=256",
+      "modelCount": 3,
+      "totalTokens": 3419305929876,
+      "totalRequests": 1096681943,
+      "popularityRank": 13
+    },
+    {
+      "slug": "tencent/fp8",
+      "displayName": "tencent/fp8",
+      "modelCount": 4,
+      "totalTokens": 3260361890045,
+      "totalRequests": 43427136,
+      "popularityRank": 14
+    },
+    {
+      "slug": "wafer",
+      "displayName": "Wafer",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.wafer.ai/terms",
+        "privacyPolicyURL": "https://www.wafer.ai/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.wafer.ai/&size=256",
+      "modelCount": 2,
+      "totalTokens": 2533614754221,
+      "totalRequests": 38731794,
+      "popularityRank": 15
+    },
+    {
+      "slug": "claude-on-aws",
+      "displayName": "Claude Platform on AWS",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.anthropic.com/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.anthropic.com/legal/commercial-terms",
+        "privacyPolicyURL": "https://www.anthropic.com/legal/privacy"
+      },
+      "iconUrl": "/images/icons/Anthropic.svg",
+      "modelCount": 9,
+      "totalTokens": 2285011823303,
+      "totalRequests": 63763468,
+      "popularityRank": 16
+    },
+    {
+      "slug": "coreweave/fp4",
+      "displayName": "coreweave/fp4",
+      "modelCount": 2,
+      "totalTokens": 1885554634919,
+      "totalRequests": 208883592,
+      "popularityRank": 17
+    },
+    {
+      "slug": "upstage/zdr",
+      "displayName": "upstage/zdr",
+      "modelCount": 4,
+      "totalTokens": 1830366121661,
+      "totalRequests": 25867230,
+      "popularityRank": 18
+    },
+    {
+      "slug": "nvidia/nvfp4",
+      "displayName": "nvidia/nvfp4",
+      "modelCount": 1,
+      "totalTokens": 1278851502112,
+      "totalRequests": 20025595,
+      "popularityRank": 19
+    },
+    {
+      "slug": "poolside/fp4",
+      "displayName": "poolside/fp4",
+      "modelCount": 2,
+      "totalTokens": 1078621937400,
+      "totalRequests": 13821974,
+      "popularityRank": 20
+    },
+    {
+      "slug": "relace/fp4",
+      "displayName": "relace/fp4",
+      "modelCount": 2,
+      "totalTokens": 1028906405358,
+      "totalRequests": 51189569,
+      "popularityRank": 21
+    },
+    {
+      "slug": "google-vertex/eu",
+      "displayName": "google-vertex/eu",
+      "modelCount": 2,
+      "totalTokens": 1013971457688,
+      "totalRequests": 390961437,
+      "popularityRank": 22
+    },
+    {
+      "slug": "gmicloud/fp8",
+      "displayName": "gmicloud/fp8",
+      "modelCount": 4,
+      "totalTokens": 916575965023,
+      "totalRequests": 85571154,
+      "popularityRank": 23
+    },
+    {
+      "slug": "alibaba/us-east-1",
+      "displayName": "alibaba/us-east-1",
+      "modelCount": 3,
+      "totalTokens": 892115280751,
+      "totalRequests": 42941841,
+      "popularityRank": 24
+    },
+    {
+      "slug": "atlas-cloud/fp8",
+      "displayName": "atlas-cloud/fp8",
+      "modelCount": 2,
+      "totalTokens": 789972034418,
+      "totalRequests": 15971481,
+      "popularityRank": 25
+    },
+    {
+      "slug": "novita",
+      "displayName": "NovitaAI",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.novita.ai/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://novita.ai/legal/terms-of-service",
+        "privacyPolicyURL": "https://novita.ai/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://novita.ai/&size=256",
+      "modelCount": 3,
+      "totalTokens": 740825933341,
+      "totalRequests": 34774561,
+      "popularityRank": 26
+    },
+    {
+      "slug": "alibaba",
+      "displayName": "Alibaba Cloud Int.",
+      "headquarters": "SG",
+      "statusPageUrl": "https://status.alibabacloud.com/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-product-terms-of-service-v-3-8-0",
+        "privacyPolicyURL": "https://www.alibabacloud.com/help/en/legal/latest/alibaba-cloud-international-website-privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.alibabacloud.com/&size=256",
+      "modelCount": 22,
+      "totalTokens": 701803747725,
+      "totalRequests": 153657314,
+      "popularityRank": 27
+    },
+    {
+      "slug": "parasail/fp8",
+      "displayName": "parasail/fp8",
+      "modelCount": 3,
+      "totalTokens": 697903230411,
+      "totalRequests": 29324123,
+      "popularityRank": 28
+    },
+    {
+      "slug": "xai/zdr",
+      "displayName": "xai/zdr",
+      "modelCount": 7,
+      "totalTokens": 695424124827,
+      "totalRequests": 22377874,
+      "popularityRank": 29
+    },
+    {
+      "slug": "near-ai/fp4",
+      "displayName": "near-ai/fp4",
+      "modelCount": 1,
+      "totalTokens": 523203555621,
+      "totalRequests": 142721490,
+      "popularityRank": 30
+    },
+    {
+      "slug": "thinkingmachines/nvfp4",
+      "displayName": "thinkingmachines/nvfp4",
+      "modelCount": 2,
+      "totalTokens": 406905022697,
+      "totalRequests": 6481516,
+      "popularityRank": 31
+    },
+    {
+      "slug": "tenstorrent/fp4",
+      "displayName": "tenstorrent/fp4",
+      "modelCount": 1,
+      "totalTokens": 398314682474,
+      "totalRequests": 22719689,
+      "popularityRank": 32
+    },
+    {
+      "slug": "darkbloom",
+      "displayName": "Darkbloom",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.darkbloom.dev/terms.html",
+        "privacyPolicyURL": "https://www.darkbloom.dev/privacy.html"
+      },
+      "iconUrl": "/images/icons/Darkbloom.png",
+      "modelCount": 1,
+      "totalTokens": 380365522092,
+      "totalRequests": 114806897,
+      "popularityRank": 33
+    },
+    {
+      "slug": "io-net/fp16",
+      "displayName": "io-net/fp16",
+      "modelCount": 1,
+      "totalTokens": 261400852040,
+      "totalRequests": 101800374,
+      "popularityRank": 34
+    },
+    {
+      "slug": "mistral/zdr",
+      "displayName": "mistral/zdr",
+      "modelCount": 16,
+      "totalTokens": 232746704859,
+      "totalRequests": 16409226,
+      "popularityRank": 35
+    },
+    {
+      "slug": "perplexity",
+      "displayName": "Perplexity",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.perplexity.ai/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.perplexity.ai/hub/legal/perplexity-api-terms-of-service",
+        "privacyPolicyURL": "https://www.perplexity.ai/hub/legal/privacy-policy"
+      },
+      "iconUrl": "/images/icons/Perplexity.svg",
+      "modelCount": 7,
+      "totalTokens": 226180134986,
+      "totalRequests": 52631581,
+      "popularityRank": 36
+    },
+    {
+      "slug": "cohere",
+      "displayName": "Cohere",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.cohere.ai/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://cohere.com/terms-of-use",
+        "privacyPolicyURL": "https://cohere.com/privacy"
+      },
+      "iconUrl": "/images/icons/Cohere.png",
+      "modelCount": 9,
+      "totalTokens": 211196786520,
+      "totalRequests": 9028494,
+      "popularityRank": 37
+    },
+    {
+      "slug": "darkbloom/fp8",
+      "displayName": "darkbloom/fp8",
+      "modelCount": 1,
+      "totalTokens": 208351156059,
+      "totalRequests": 58353067,
+      "popularityRank": 38
+    },
+    {
+      "slug": "z-ai/fp8",
+      "displayName": "z-ai/fp8",
+      "modelCount": 3,
+      "totalTokens": 201917556894,
+      "totalRequests": 3653692,
+      "popularityRank": 39
+    },
+    {
+      "slug": "inceptron/int4",
+      "displayName": "inceptron/int4",
+      "modelCount": 2,
+      "totalTokens": 188668506695,
+      "totalRequests": 9215685,
+      "popularityRank": 40
+    },
+    {
+      "slug": "gmicloud/bf16",
+      "displayName": "gmicloud/bf16",
+      "modelCount": 2,
+      "totalTokens": 180890430158,
+      "totalRequests": 5262107,
+      "popularityRank": 41
+    },
+    {
+      "slug": "voyageai",
+      "displayName": "Voyage AI by MongoDB",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.voyageai.com/tos",
+        "privacyPolicyURL": "https://www.voyageai.com/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.voyageai.com&size=256",
+      "modelCount": 9,
+      "totalTokens": 180499927457,
+      "totalRequests": 20147117,
+      "popularityRank": 42
+    },
+    {
+      "slug": "azure/global",
+      "displayName": "azure/global",
+      "modelCount": 1,
+      "totalTokens": 177825616839,
+      "totalRequests": 37052936,
+      "popularityRank": 43
+    },
+    {
+      "slug": "nebius",
+      "displayName": "Nebius Token Factory",
+      "headquarters": "NL",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://docs.nebius.com/legal/studio/terms-of-use/",
+        "privacyPolicyURL": "https://docs.nebius.com/legal/studio/privacy/"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://docs.nebius.com/&size=256",
+      "modelCount": 1,
+      "totalTokens": 173716288154,
+      "totalRequests": 56368072,
+      "popularityRank": 44
+    },
+    {
+      "slug": "deepinfra/fp4",
+      "displayName": "deepinfra/fp4",
+      "modelCount": 5,
+      "totalTokens": 138072504090,
+      "totalRequests": 27357629,
+      "popularityRank": 45
+    },
+    {
+      "slug": "xiaomi/fp8",
+      "displayName": "xiaomi/fp8",
+      "modelCount": 1,
+      "totalTokens": 124000204712,
+      "totalRequests": 899346,
+      "popularityRank": 46
+    },
+    {
+      "slug": "poolside/fp8",
+      "displayName": "poolside/fp8",
+      "modelCount": 2,
+      "totalTokens": 83018761016,
+      "totalRequests": 2099932,
+      "popularityRank": 47
+    },
+    {
+      "slug": "inception",
+      "displayName": "Inception",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.inceptionlabs.ai/terms",
+        "privacyPolicyURL": "https://www.inceptionlabs.ai/terms#privacy-policy"
+      },
+      "iconUrl": "/images/icons/Inception.svg",
+      "modelCount": 4,
+      "totalTokens": 72164278027,
+      "totalRequests": 35209561,
+      "popularityRank": 48
+    },
+    {
+      "slug": "siliconflow/fp8",
+      "displayName": "siliconflow/fp8",
+      "modelCount": 8,
+      "totalTokens": 62789555862,
+      "totalRequests": 10028608,
+      "popularityRank": 49
+    },
+    {
+      "slug": "streamlake/fp8",
+      "displayName": "streamlake/fp8",
+      "modelCount": 2,
+      "totalTokens": 61663371177,
+      "totalRequests": 3772476,
+      "popularityRank": 50
+    },
+    {
+      "slug": "deepinfra/bf16",
+      "displayName": "deepinfra/bf16",
+      "modelCount": 11,
+      "totalTokens": 58302998009,
+      "totalRequests": 22337024,
+      "popularityRank": 51
+    },
+    {
+      "slug": "parasail/bf16",
+      "displayName": "parasail/bf16",
+      "modelCount": 8,
+      "totalTokens": 44810043755,
+      "totalRequests": 8834597,
+      "popularityRank": 52
+    },
+    {
+      "slug": "anthropic",
+      "displayName": "Anthropic",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.anthropic.com/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.anthropic.com/legal/commercial-terms",
+        "privacyPolicyURL": "https://www.anthropic.com/legal/privacy"
+      },
+      "iconUrl": "/images/icons/Anthropic.svg",
+      "modelCount": 15,
+      "totalTokens": 40426131386,
+      "totalRequests": 6776615,
+      "popularityRank": 53
+    },
+    {
+      "slug": "deepinfra/fp16",
+      "displayName": "deepinfra/fp16",
+      "modelCount": 1,
+      "totalTokens": 39157542252,
+      "totalRequests": 4825053,
+      "popularityRank": 54
+    },
+    {
+      "slug": "deepinfra",
+      "displayName": "DeepInfra",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.deepinfra.com/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://deepinfra.com/terms",
+        "privacyPolicyURL": "https://deepinfra.com/privacy"
+      },
+      "iconUrl": "/images/icons/DeepInfra.webp",
+      "modelCount": 2,
+      "totalTokens": 36799956163,
+      "totalRequests": 46990916,
+      "popularityRank": 55
+    },
+    {
+      "slug": "deepinfra/turbo",
+      "displayName": "deepinfra/turbo",
+      "modelCount": 2,
+      "totalTokens": 36000712124,
+      "totalRequests": 24319983,
+      "popularityRank": 56
+    },
+    {
+      "slug": "darkbloom/int4",
+      "displayName": "darkbloom/int4",
+      "modelCount": 2,
+      "totalTokens": 31827853406,
+      "totalRequests": 3237855,
+      "popularityRank": 57
+    },
+    {
+      "slug": "atlas-cloud/int4",
+      "displayName": "atlas-cloud/int4",
+      "modelCount": 1,
+      "totalTokens": 31532226419,
+      "totalRequests": 2152318,
+      "popularityRank": 58
+    },
+    {
+      "slug": "dekallm",
+      "displayName": "DekaLLM",
+      "headquarters": "ID",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://docs.cloudeka.ai/service-portal-ai/end-user-license-agreement",
+        "privacyPolicyURL": "https://www.cloudeka.id/id/privacy-policy/"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.cloudeka.id&size=256",
+      "modelCount": 1,
+      "totalTokens": 28905247295,
+      "totalRequests": 16710302,
+      "popularityRank": 59
+    },
+    {
+      "slug": "parasail",
+      "displayName": "Parasail",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://parasail.io/legal/terms-of-service",
+        "privacyPolicyURL": "https://www.parasail.io/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.parasail.io/&size=256",
+      "modelCount": 1,
+      "totalTokens": 26668464431,
+      "totalRequests": 23770687,
+      "popularityRank": 60
+    },
+    {
+      "slug": "liquid/fp8",
+      "displayName": "liquid/fp8",
+      "modelCount": 2,
+      "totalTokens": 24502302658,
+      "totalRequests": 2451031,
+      "popularityRank": 61
+    },
+    {
+      "slug": "streamlake",
+      "displayName": "StreamLake",
+      "headquarters": "CN",
+      "statusPageUrl": "https://status.streamlake.ai/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.streamlake.ai/document/DOC/mgkchnd89grpt1961fw",
+        "privacyPolicyURL": "https://www.streamlake.ai/document/DOC/mgkci47q13qr66h9i54"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.streamlake.com/&size=256",
+      "modelCount": 1,
+      "totalTokens": 20390968529,
+      "totalRequests": 9042353,
+      "popularityRank": 62
+    },
+    {
+      "slug": "novita/bf16",
+      "displayName": "novita/bf16",
+      "modelCount": 3,
+      "totalTokens": 19984924820,
+      "totalRequests": 3842640,
+      "popularityRank": 63
+    },
+    {
+      "slug": "nextbit/int4",
+      "displayName": "nextbit/int4",
+      "modelCount": 3,
+      "totalTokens": 19661475366,
+      "totalRequests": 15557575,
+      "popularityRank": 64
+    },
+    {
+      "slug": "venice/fp4",
+      "displayName": "venice/fp4",
+      "modelCount": 1,
+      "totalTokens": 19016584564,
+      "totalRequests": 1447761,
+      "popularityRank": 65
+    },
+    {
+      "slug": "novita/fp8",
+      "displayName": "novita/fp8",
+      "modelCount": 5,
+      "totalTokens": 18563880101,
+      "totalRequests": 2725351,
+      "popularityRank": 66
+    },
+    {
+      "slug": "deepinfra/us",
+      "displayName": "deepinfra/us",
+      "modelCount": 20,
+      "totalTokens": 18229409604,
+      "totalRequests": 43921928,
+      "popularityRank": 67
+    },
+    {
+      "slug": "seed/fp8",
+      "displayName": "seed/fp8",
+      "modelCount": 6,
+      "totalTokens": 17901502213,
+      "totalRequests": 5293230,
+      "popularityRank": 68
+    },
+    {
+      "slug": "digitalocean",
+      "displayName": "DigitalOcean",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.digitalocean.com/legal/terms-of-service-agreement",
+        "privacyPolicyURL": "https://www.digitalocean.com/legal/privacy-policy"
+      },
+      "iconUrl": "/images/icons/DigitalOcean.svg",
+      "modelCount": 1,
+      "totalTokens": 17550831939,
+      "totalRequests": 8743410,
+      "popularityRank": 69
+    },
+    {
+      "slug": "amazon-bedrock/eu-west-1",
+      "displayName": "amazon-bedrock/eu-west-1",
+      "modelCount": 4,
+      "totalTokens": 17324739515,
+      "totalRequests": 8209281,
+      "popularityRank": 70
+    },
+    {
+      "slug": "chutes/fp8",
+      "displayName": "chutes/fp8",
+      "modelCount": 1,
+      "totalTokens": 17225358001,
+      "totalRequests": 2494077,
+      "popularityRank": 71
+    },
+    {
+      "slug": "primeintellect",
+      "displayName": "Prime Intellect",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.primeintellect.ai/&size=256",
+      "modelCount": 1,
+      "totalTokens": 16972294163,
+      "totalRequests": 10903593,
+      "popularityRank": 72
+    },
+    {
+      "slug": "perplexity/int8",
+      "displayName": "perplexity/int8",
+      "modelCount": 2,
+      "totalTokens": 16843182539,
+      "totalRequests": 11891946,
+      "popularityRank": 73
+    },
+    {
+      "slug": "liquid",
+      "displayName": "Liquid",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": true,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.liquid.ai/terms-conditions",
+        "privacyPolicyURL": "https://www.liquid.ai/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.liquid.ai/&size=256",
+      "modelCount": 2,
+      "totalTokens": 16331081631,
+      "totalRequests": 5986657,
+      "popularityRank": 74
+    },
+    {
+      "slug": "google-vertex/us",
+      "displayName": "google-vertex/us",
+      "modelCount": 1,
+      "totalTokens": 15847898916,
+      "totalRequests": 50735545,
+      "popularityRank": 75
+    },
+    {
+      "slug": "google-vertex/us-south1",
+      "displayName": "google-vertex/us-south1",
+      "modelCount": 1,
+      "totalTokens": 14998954404,
+      "totalRequests": 765025,
+      "popularityRank": 76
+    },
+    {
+      "slug": "venice/fp8",
+      "displayName": "venice/fp8",
+      "modelCount": 2,
+      "totalTokens": 14014616967,
+      "totalRequests": 5197187,
+      "popularityRank": 77
+    },
+    {
+      "slug": "venice",
+      "displayName": "Venice",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://venice.ai/legal/tos",
+        "privacyPolicyURL": "https://venice.ai/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://venice.ai/&size=256",
+      "modelCount": 1,
+      "totalTokens": 13077277125,
+      "totalRequests": 582523,
+      "popularityRank": 78
+    },
+    {
+      "slug": "fireworks",
+      "displayName": "Fireworks",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.fireworks.ai/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://fireworks.ai/terms-of-service",
+        "privacyPolicyURL": "https://fireworks.ai/privacy-policy"
+      },
+      "iconUrl": "/images/icons/Fireworks.png",
+      "modelCount": 2,
+      "totalTokens": 11897514092,
+      "totalRequests": 1070975,
+      "popularityRank": 79
+    },
+    {
+      "slug": "google-vertex/us-central1",
+      "displayName": "google-vertex/us-central1",
+      "modelCount": 2,
+      "totalTokens": 11887516989,
+      "totalRequests": 26440235,
+      "popularityRank": 80
+    },
+    {
+      "slug": "dekallm/fp8",
+      "displayName": "dekallm/fp8",
+      "modelCount": 1,
+      "totalTokens": 9102168046,
+      "totalRequests": 1282884,
+      "popularityRank": 81
+    },
+    {
+      "slug": "nex-agi/fp8",
+      "displayName": "nex-agi/fp8",
+      "modelCount": 1,
+      "totalTokens": 8580264694,
+      "totalRequests": 211155,
+      "popularityRank": 82
+    },
+    {
+      "slug": "together",
+      "displayName": "Together",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.together.ai/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.together.ai/terms-of-service",
+        "privacyPolicyURL": "https://www.together.ai/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.together.ai/&size=256",
+      "modelCount": 3,
+      "totalTokens": 6902763952,
+      "totalRequests": 1499144,
+      "popularityRank": 83
+    },
+    {
+      "slug": "aion-labs",
+      "displayName": "AionLabs",
+      "headquarters": "IL",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.aionlabs.ai/terms/",
+        "privacyPolicyURL": "https://www.aionlabs.ai/privacy-policy/"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.aionlabs.ai/&size=256",
+      "modelCount": 6,
+      "totalTokens": 6740673957,
+      "totalRequests": 520462,
+      "popularityRank": 84
+    },
+    {
+      "slug": "respan",
+      "displayName": "Respan",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://respan.ai/legal/terms-of-use",
+        "privacyPolicyURL": "https://respan.ai/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://respan.ai/&size=256",
+      "modelCount": 4,
+      "totalTokens": 6010003924,
+      "totalRequests": 2198235,
+      "popularityRank": 85
+    },
+    {
+      "slug": "phala",
+      "displayName": "Phala",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.phala.network/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://redpill.ai/terms",
+        "privacyPolicyURL": "https://redpill.ai/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://phala.network/&size=256",
+      "modelCount": 2,
+      "totalTokens": 5258951205,
+      "totalRequests": 5384830,
+      "popularityRank": 86
+    },
+    {
+      "slug": "scaledown",
+      "displayName": "ScaleDown",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://scaledown.ai/terms",
+        "privacyPolicyURL": "https://scaledown.ai/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://scaledown.ai/&size=256",
+      "modelCount": 3,
+      "totalTokens": 4606088032,
+      "totalRequests": 925411,
+      "popularityRank": 87
+    },
+    {
+      "slug": "cloudflare",
+      "displayName": "Cloudflare",
+      "headquarters": "US",
+      "statusPageUrl": "https://www.cloudflarestatus.com/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.cloudflare.com/service-specific-terms-developer-platform/#developer-platform-terms",
+        "privacyPolicyURL": "https://developers.cloudflare.com/workers-ai/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.cloudflare.com/&size=256",
+      "modelCount": 5,
+      "totalTokens": 4503939137,
+      "totalRequests": 3484418,
+      "popularityRank": 88
+    },
+    {
+      "slug": "seed",
+      "displayName": "Seed",
+      "headquarters": "SG",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://docs.byteplus.com/en/docs/legal/docs-terms-of-service",
+        "privacyPolicyURL": "https://docs.byteplus.com/en/docs/legal/docs-privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://seed.bytedance.com/&size=256",
+      "modelCount": 10,
+      "totalTokens": 4503872467,
+      "totalRequests": 450523,
+      "popularityRank": 89
+    },
+    {
+      "slug": "deepinfra/fp32",
+      "displayName": "deepinfra/fp32",
+      "modelCount": 1,
+      "totalTokens": 4436098904,
+      "totalRequests": 1097015,
+      "popularityRank": 90
+    },
+    {
+      "slug": "novita/fp4",
+      "displayName": "novita/fp4",
+      "modelCount": 1,
+      "totalTokens": 3747788117,
+      "totalRequests": 664105,
+      "popularityRank": 91
+    },
+    {
+      "slug": "crusoe/bf16",
+      "displayName": "crusoe/bf16",
+      "modelCount": 1,
+      "totalTokens": 3363963486,
+      "totalRequests": 149766,
+      "popularityRank": 92
+    },
+    {
+      "slug": "xai",
+      "displayName": "SpaceXAI",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.x.ai/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://x.ai/legal/terms-of-service-enterprise",
+        "privacyPolicyURL": "https://x.ai/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://x.ai/&size=256",
+      "modelCount": 9,
+      "totalTokens": 3359146604,
+      "totalRequests": 1257071,
+      "popularityRank": 93
+    },
+    {
+      "slug": "groq",
+      "displayName": "Groq",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.groq.com/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://groq.com/terms-of-use/",
+        "privacyPolicyURL": "https://groq.com/privacy-policy/"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://groq.com/&size=256",
+      "modelCount": 1,
+      "totalTokens": 2907630183,
+      "totalRequests": 2162481,
+      "popularityRank": 94
+    },
+    {
+      "slug": "mistral/eu",
+      "displayName": "mistral/eu",
+      "modelCount": 1,
+      "totalTokens": 2832345522,
+      "totalRequests": 91744,
+      "popularityRank": 95
+    },
+    {
+      "slug": "z-ai",
+      "displayName": "Z.ai",
+      "headquarters": "SG",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://chat.z.ai/legal-agreement/terms-of-service",
+        "privacyPolicyURL": "https://chat.z.ai/legal-agreement/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://z.ai/model-api&size=256",
+      "modelCount": 1,
+      "totalTokens": 2399068622,
+      "totalRequests": 103757,
+      "popularityRank": 96
+    },
+    {
+      "slug": "google-vertex",
+      "displayName": "Google Vertex",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.cloud.google.com/products/sdXM79fz1FS6ekNpu37K/history",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://cloud.google.com/terms/",
+        "privacyPolicyURL": "https://cloud.google.com/terms/cloud-privacy-notice"
+      },
+      "iconUrl": "/images/icons/GoogleVertex.svg",
+      "modelCount": 5,
+      "totalTokens": 2171975159,
+      "totalRequests": 295438,
+      "popularityRank": 97
+    },
+    {
+      "slug": "mistral",
+      "displayName": "Mistral",
+      "headquarters": "FR",
+      "statusPageUrl": "https://status.mistral.ai/",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://mistral.ai/terms/#terms-of-use",
+        "privacyPolicyURL": "https://mistral.ai/terms/#privacy-policy"
+      },
+      "iconUrl": "/images/icons/Mistral.png",
+      "modelCount": 9,
+      "totalTokens": 2134022044,
+      "totalRequests": 809669,
+      "popularityRank": 98
+    },
+    {
+      "slug": "venice/fp16",
+      "displayName": "venice/fp16",
+      "modelCount": 1,
+      "totalTokens": 2053985562,
+      "totalRequests": 660035,
+      "popularityRank": 99
+    },
+    {
+      "slug": "minimax/fp8",
+      "displayName": "minimax/fp8",
+      "modelCount": 2,
+      "totalTokens": 1984431425,
+      "totalRequests": 103984,
+      "popularityRank": 100
+    },
+    {
+      "slug": "google-ai-studio/global",
+      "displayName": "google-ai-studio/global",
+      "modelCount": 2,
+      "totalTokens": 1890137275,
+      "totalRequests": 699340,
+      "popularityRank": 101
+    },
+    {
+      "slug": "sakana",
+      "displayName": "Sakana",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://console.sakana.ai/terms-of-service",
+        "privacyPolicyURL": "https://console.sakana.ai/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://sakana.ai/&size=256",
+      "modelCount": 4,
+      "totalTokens": 1518726310,
+      "totalRequests": 56151,
+      "popularityRank": 102
+    },
+    {
+      "slug": "nex-agi/bf16",
+      "displayName": "nex-agi/bf16",
+      "modelCount": 1,
+      "totalTokens": 1485459674,
+      "totalRequests": 312926,
+      "popularityRank": 103
+    },
+    {
+      "slug": "sail-research/fp4",
+      "displayName": "sail-research/fp4",
+      "modelCount": 1,
+      "totalTokens": 1363313043,
+      "totalRequests": 546836,
+      "popularityRank": 104
+    },
+    {
+      "slug": "arcee-ai",
+      "displayName": "Arcee AI",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.arcee.ai/&size=256",
+      "modelCount": 1,
+      "totalTokens": 1327282438,
+      "totalRequests": 78210,
+      "popularityRank": 105
+    },
+    {
+      "slug": "tencent",
+      "displayName": "Tencent Cloud",
+      "headquarters": "CN",
+      "statusPageUrl": "https://status.tencentcloud.com",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.tencentcloud.com/en/document/product/301/78869",
+        "privacyPolicyURL": "https://www.tencentcloud.com/en/document/product/1300/78952"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.tencentcloud.com&size=256",
+      "modelCount": 1,
+      "totalTokens": 1315640427,
+      "totalRequests": 81397,
+      "popularityRank": 106
+    },
+    {
+      "slug": "black-forest-labs",
+      "displayName": "Black Forest Labs",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://bfl.ai/legal/terms-of-service",
+        "privacyPolicyURL": "https://bfl.ai/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://bfl.ai&size=256",
+      "modelCount": 7,
+      "totalTokens": 1309119000,
+      "totalRequests": 219733,
+      "popularityRank": 107
+    },
+    {
+      "slug": "unbiased",
+      "displayName": "Unbiased",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://unbiased.ai/terms/",
+        "privacyPolicyURL": "https://unbiased.ai/terms/#privacy-policy"
+      },
+      "iconUrl": "/images/icons/Unbiased.png",
+      "modelCount": 2,
+      "totalTokens": 1030364097,
+      "totalRequests": 55232,
+      "popularityRank": 108
+    },
+    {
+      "slug": "nebius/fp8",
+      "displayName": "nebius/fp8",
+      "modelCount": 1,
+      "totalTokens": 875868744,
+      "totalRequests": 249229,
+      "popularityRank": 109
+    },
+    {
+      "slug": "parasail/fp16",
+      "displayName": "parasail/fp16",
+      "modelCount": 1,
+      "totalTokens": 728326612,
+      "totalRequests": 530267,
+      "popularityRank": 110
+    },
+    {
+      "slug": "minimax",
+      "displayName": "MiniMax",
+      "headquarters": "SG",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.minimax.io/platform/protocol/terms-of-service",
+        "privacyPolicyURL": "https://www.minimax.io/platform/protocol/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://minimaxi.com/&size=256",
+      "modelCount": 8,
+      "totalTokens": 724234044,
+      "totalRequests": 343301,
+      "popularityRank": 111
+    },
+    {
+      "slug": "recraft",
+      "displayName": "Recraft",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true
+      },
+      "iconUrl": "/images/icons/Recraft.svg",
+      "modelCount": 16,
+      "totalTokens": 629588111,
+      "totalRequests": 139747,
+      "popularityRank": 112
+    },
+    {
+      "slug": "perceptron",
+      "displayName": "Perceptron",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.perceptron.inc/terms-of-use",
+        "privacyPolicyURL": "https://www.perceptron.inc/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.perceptron.inc&size=256",
+      "modelCount": 2,
+      "totalTokens": 421320267,
+      "totalRequests": 229805,
+      "popularityRank": 113
+    },
+    {
+      "slug": "mancer/fp8",
+      "displayName": "mancer/fp8",
+      "modelCount": 3,
+      "totalTokens": 378566205,
+      "totalRequests": 145530,
+      "popularityRank": 114
+    },
+    {
+      "slug": "nextbit/bf16",
+      "displayName": "nextbit/bf16",
+      "modelCount": 1,
+      "totalTokens": 326254652,
+      "totalRequests": 122144,
+      "popularityRank": 115
+    },
+    {
+      "slug": "relace/fp8",
+      "displayName": "relace/fp8",
+      "modelCount": 1,
+      "totalTokens": 163617201,
+      "totalRequests": 11055,
+      "popularityRank": 116
+    },
+    {
+      "slug": "liquid/bf16",
+      "displayName": "liquid/bf16",
+      "modelCount": 1,
+      "totalTokens": 123430053,
+      "totalRequests": 80179,
+      "popularityRank": 117
+    },
+    {
+      "slug": "inference-net/bf16",
+      "displayName": "inference-net/bf16",
+      "modelCount": 2,
+      "totalTokens": 114888779,
+      "totalRequests": 65119,
+      "popularityRank": 118
+    },
+    {
+      "slug": "black-forest-labs/us-3",
+      "displayName": "black-forest-labs/us-3",
+      "modelCount": 2,
+      "totalTokens": 92002952,
+      "totalRequests": 9209,
+      "popularityRank": 119
+    },
+    {
+      "slug": "sourceful",
+      "displayName": "Sourceful",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.sourceful.com/legal/spring-terms-of-use",
+        "privacyPolicyURL": "https://www.sourceful.com/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.sourceful.com&size=256",
+      "modelCount": 4,
+      "totalTokens": 85784295,
+      "totalRequests": 17894,
+      "popularityRank": 120
+    },
+    {
+      "slug": "krea",
+      "displayName": "Krea",
+      "headquarters": "US",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.krea.ai/terms",
+        "privacyPolicyURL": "https://www.krea.ai/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.krea.ai&size=256",
+      "modelCount": 4,
+      "totalTokens": 83574952,
+      "totalRequests": 18878,
+      "popularityRank": 121
+    },
+    {
+      "slug": "morph",
+      "displayName": "Morph",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://www.morphllm.com/privacy/tos",
+        "privacyPolicyURL": "https://morphllm.com/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://morphllm.com&size=256",
+      "modelCount": 1,
+      "totalTokens": 77303099,
+      "totalRequests": 11834,
+      "popularityRank": 122
+    },
+    {
+      "slug": "upstage",
+      "displayName": "Upstage",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.upstage.ai/terms-of-service",
+        "privacyPolicyURL": "https://www.upstage.ai/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://upstage.ai&size=256",
+      "modelCount": 1,
+      "totalTokens": 74611939,
+      "totalRequests": 24961,
+      "popularityRank": 123
+    },
+    {
+      "slug": "reka",
+      "displayName": "Reka AI",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://reka.ai/legal/terms-of-use",
+        "privacyPolicyURL": "https://reka.ai/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://reka.ai&size=256",
+      "modelCount": 2,
+      "totalTokens": 69006248,
+      "totalRequests": 63895,
+      "popularityRank": 124
+    },
+    {
+      "slug": "morph/fp8",
+      "displayName": "morph/fp8",
+      "modelCount": 1,
+      "totalTokens": 41157849,
+      "totalRequests": 9647,
+      "popularityRank": 125
+    },
+    {
+      "slug": "elevenlabs",
+      "displayName": "ElevenLabs",
+      "statusPageUrl": "https://status.elevenlabs.io",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://elevenlabs.io/terms-of-use",
+        "privacyPolicyURL": "https://elevenlabs.io/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://elevenlabs.io/&size=256",
+      "modelCount": 11,
+      "totalTokens": 40410397,
+      "totalRequests": 5541273,
+      "popularityRank": 126
+    },
+    {
+      "slug": "fish-audio",
+      "displayName": "Fish Audio",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://fish.audio/terms",
+        "privacyPolicyURL": "https://fish.audio/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://fish.audio/&size=256",
+      "modelCount": 7,
+      "totalTokens": 39896072,
+      "totalRequests": 1044823,
+      "popularityRank": 127
+    },
+    {
+      "slug": "relace/bf16",
+      "displayName": "relace/bf16",
+      "modelCount": 1,
+      "totalTokens": 4269412,
+      "totalRequests": 8635,
+      "popularityRank": 128
+    },
+    {
+      "slug": "primeintellect/fp8",
+      "displayName": "primeintellect/fp8",
+      "modelCount": 2,
+      "totalTokens": 1877657,
+      "totalRequests": 2239,
+      "popularityRank": 129
+    },
+    {
+      "slug": "deepgram",
+      "displayName": "Deepgram",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": false,
+        "termsOfServiceURL": "https://deepgram.com/terms",
+        "privacyPolicyURL": "https://deepgram.com/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://deepgram.com/&size=256",
+      "modelCount": 3,
+      "totalTokens": 1083667,
+      "totalRequests": 388205,
+      "popularityRank": 130
+    },
+    {
+      "slug": "heygen",
+      "displayName": "HeyGen",
+      "headquarters": "US",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.heygen.com/terms",
+        "privacyPolicyURL": "https://www.heygen.com/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://heygen.com&size=256",
+      "modelCount": 4,
+      "totalTokens": 163333,
+      "totalRequests": 78305,
+      "popularityRank": 131
+    },
+    {
+      "slug": "assemblyai",
+      "displayName": "AssemblyAI",
+      "statusPageUrl": "https://status.assemblyai.com",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://www.assemblyai.com/legal/terms-of-service",
+        "privacyPolicyURL": "https://www.assemblyai.com/legal/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.assemblyai.com/&size=256",
+      "modelCount": 2,
+      "totalTokens": 0,
+      "totalRequests": 260527,
+      "popularityRank": 132
+    },
+    {
+      "slug": "runway",
+      "displayName": "Runway",
+      "headquarters": "US",
+      "statusPageUrl": "https://status.runwayml.com",
+      "byokEnabled": false,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "termsOfServiceURL": "https://runwayml.com/terms-of-use",
+        "privacyPolicyURL": "https://runwayml.com/privacy-policy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://runwayml.com/favicon.ico&size=256",
+      "modelCount": 2,
+      "totalTokens": 0,
+      "totalRequests": 1383,
+      "popularityRank": 133
+    },
+    {
+      "slug": "atlas-cloud",
+      "displayName": "AtlasCloud",
+      "headquarters": "US",
+      "byokEnabled": true,
+      "dataPolicy": {
+        "training": false,
+        "retainsPrompts": true,
+        "privacyPolicyURL": "https://www.atlascloud.ai/privacy"
+      },
+      "iconUrl": "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.atlascloud.ai/&size=256",
+      "modelCount": 5,
+      "totalTokens": 0,
+      "totalRequests": 26922,
+      "popularityRank": 134
+    }
+  ]
+}

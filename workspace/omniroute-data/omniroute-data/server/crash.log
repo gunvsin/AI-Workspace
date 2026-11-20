@@ -1,0 +1,43 @@
+[2026-10-05T11:13:18.542Z] Server crashed 2 times in <30s.
+▲ Next.js 16.3.5
+- Local:         http://localhost:20128
+- Network:       http://0.0.0.0:20128
+✓ Ready in 0ms
+✓ Running next.config took 14ms
+[startup] Dashboard/API server (serves /v1 inference) is bound to non-loopback host "0.0.0.0" while REQUIRE_API_KEY is disabled — this exposes the anonymous /v1 proxy to every reachable network interface. Set REQUIRE_API_KEY=true, or bind back to 127.0.0.1, unless a reverse proxy in front of this instance already enforces its own authentication.
+[DB] Driver: better-sqlite3 | file: C:\Users\gunvs\.omniroute\storage.sqlite
+[Migration] Pre-migration backup created: C:\Users\gunvs\.omniroute\db_backups\db_state-3e07b345152545c22d82a1a9152e8797b117a67154334b500655c495c2b99a88_pre-migration.sqlite
+[Migration] 🛑 ABORT: Detected 192 pending migrations on an existing database (threshold is 50). This usually means the migration tracking table was accidentally wiped. Running all migrations from scratch will cause data loss or schema errors. Physical schema already shows 013 (quota_snapshots table), so at most 180 pending migration(s) are expected from a legitimate upgrade. To bypass this check (e.g. after restoring a backup where the migration tracking table was wiped), set OMNIROUTE_MAX_PENDING_MIGRATIONS=0 in your server.env or DATA_DIR/.env and restart.
+[STARTUP] Global fetch proxy patch initialized
+[DB] Driver: better-sqlite3 | file: C:\Users\gunvs\.omniroute\storage.sqlite
+[Migration] Pre-migration backup created: C:\Users\gunvs\.omniroute\db_backups\db_state-e2cdf63dc396a52fdfd9de590fc6e32c67c1bd18e782d410ba087f5ba15faecd_pre-migration.sqlite
+[Migration] 🛑 ABORT (repeat — see earlier detail): 192 pending > threshold 50. Set OMNIROUTE_MAX_PENDING_MIGRATIONS=0 to bypass.
+[DB] Driver: better-sqlite3 | file: C:\Users\gunvs\.omniroute\storage.sqlite
+[Migration] Pre-migration backup created: C:\Users\gunvs\.omniroute\db_backups\db_state-a493bb619022eb27e03a0b22b443084af58f6a370b8b4e55396fd79c3d07cf7e_pre-migration.sqlite
+[Migration] 🛑 ABORT (repeat — see earlier detail): 192 pending > threshold 50. Set OMNIROUTE_MAX_PENDING_MIGRATIONS=0 to bypass.
+[STARTUP] Moonshot custom-node fetcher scan skipped: Error [MigrationSafetyAbortError]: [Migration] 🛑 ABORT: Detected 192 pending migrations on an existing database (threshold is 50). This usually means the migration tracking table was accidentally wiped. Running all migrations from scratch will cause data loss or schema errors. Physical schema already shows 013 (quota_snapshots table), so at most 180 pending migration(s) are expected from a legitimate upgrade. To bypass this check (e.g. after restoring a backup where the migration tracking table was wiped), set OMNIROUTE_MAX_PENDING_MIGRATIONS=0 in your server.env or DATA_DIR/.env and restart.
+    at ignore-listed frames
+[STARTUP] Quota fetchers registered
+[DB] Driver: better-sqlite3 | file: C:\Users\gunvs\.omniroute\storage.sqlite
+[Migration] Pre-migration backup created: C:\Users\gunvs\.omniroute\db_backups\db_state-631f6f4586a3c71a473bc201212a0c7f87361c81592364386569aab626132310_pre-migration.sqlite
+[Migration] 🛑 ABORT (repeat — see earlier detail): 192 pending > threshold 50. Set OMNIROUTE_MAX_PENDING_MIGRATIONS=0 to bypass.
+[STARTUP] Fatal: Database driver initialization failed: [Migration] 🛑 ABORT: Detected 192 pending migrations on an existing database (threshold is 50). This usually means the migration tracking table was accidentally wiped. Running all migrations from scratch will cause data loss or schema errors. Physical schema already shows 013 (quota_snapshots table), so at most 180 pending migration(s) are expected from a legitimate upgrade. To bypass this check (e.g. after restoring a backup where the migration tracking table was wiped), set OMNIROUTE_MAX_PENDING_MIGRATIONS=0 in your server.env or DATA_DIR/.env and restart.
+[STARTUP] Fatal: instrumentation hook failed during boot: [Migration] 🛑 ABORT: Detected 192 pending migrations on an existing database (threshold is 50). This usually means the migration tracking table was accidentally wiped. Running all migrations from scratch will cause data loss or schema errors. Physical schema already shows 013 (quota_snapshots table), so at most 180 pending migration(s) are expected from a legitimate upgrade. To bypass this check (e.g. after restoring a backup where the migration tracking table was wiped), set OMNIROUTE_MAX_PENDING_MIGRATIONS=0 in your server.env or DATA_DIR/.env and restart.
+Failed to prepare server Error [MigrationSafetyAbortError]: An error occurred while loading instrumentation hook: [Migration] 🛑 ABORT: Detected 192 pending migrations on an existing database (threshold is 50). This usually means the migration tracking table was accidentally wiped. Running all migrations from scratch will cause data loss or schema errors. Physical schema already shows 013 (quota_snapshots table), so at most 180 pending migration(s) are expected from a legitimate upgrade. To bypass this check (e.g. after restoring a backup where the migration tracking table was wiped), set OMNIROUTE_MAX_PENDING_MIGRATIONS=0 in your server.env or DATA_DIR/.env and restart.
+    at ignore-listed frames
+file:///C:/Users/gunvs/AppData/Roaming/npm/node_modules/omniroute/dist/httpClientAbortGuard.mjs:289
+    throw err;
+    ^
+
+M [MigrationSafetyAbortError]: [Migration] 🛑 ABORT: Detected 192 pending migrations on an existing database (threshold is 50). This usually means the migration tracking table was accidentally wiped. Running all migrations from scratch will cause data loss or schema errors. Physical schema already shows 013 (quota_snapshots table), so at most 180 pending migration(s) are expected from a legitimate upgrade. To bypass this check (e.g. after restoring a backup where the migration tracking table was wiped), set OMNIROUTE_MAX_PENDING_MIGRATIONS=0 in your server.env or DATA_DIR/.env and restart.
+    at C:\Users\gunvs\AppData\Roaming\npm\node_modules\omniroute\dist\.build\next\server\chunks\_0b0u65w._.js:357:7092
+    at sqliteTransaction.<anonymous> (C:\Users\gunvs\AppData\Roaming\npm\node_modules\omniroute\dist\.build\next\server\chunks\_0b0u65w._.js:351:29939)
+    at sqliteTransaction (C:\Users\gunvs\AppData\Roaming\npm\node_modules\omniroute\node_modules\better-sqlite3\lib\methods\transaction.js:65:24)
+    at Object.immediate (C:\Users\gunvs\AppData\Roaming\npm\node_modules\omniroute\dist\.build\next\server\chunks\src_1l12c-0._.js:1:3830)
+    at G (C:\Users\gunvs\AppData\Roaming\npm\node_modules\omniroute\dist\.build\next\server\chunks\_0b0u65w._.js:351:29925)
+    at C:\Users\gunvs\AppData\Roaming\npm\node_modules\omniroute\dist\.build\next\server\chunks\_0b0u65w._.js:357:2632
+    at ew (C:\Users\gunvs\AppData\Roaming\npm\node_modules\omniroute\dist\.build\next\server\chunks\_0b0u65w._.js:300:25)
+    at g (C:\Users\gunvs\AppData\Roaming\npm\node_modules\omniroute\dist\.build\next\server\chunks\_14y2wua._.js:1:19114)
+    at C:\Users\gunvs\AppData\Roaming\npm\node_modules\omniroute\dist\.build\next\server\chunks\_14y2wua._.js:21:2661
+
+Node.js v24.17.0

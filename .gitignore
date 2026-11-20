@@ -7,10 +7,10 @@ debug_steps.txt
 *.tmp.*
 clm_*
 
-# stray files
-Ledgity-Sovereign-Ledgity-Sovereign-Ledger
-
 # tooling dirs
 temp-starter/
 node_modules/
 .next/
+
+# stray files
+Ledgity-Sovereign-Ledgity-Sovereign-Ledger

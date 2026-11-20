@@ -1,0 +1,746 @@
+{"timestamp":"2026-10-05T10:24:34.145Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T10:24:34.147Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T10:24:34.147Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T10:24:34.148Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T10:24:34.149Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T10:24:34.149Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T10:24:34.151Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T10:24:34.161Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T10:24:34.162Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T10:24:34.165Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 6h (phase offset +45m)"}
+{"timestamp":"2026-10-05T10:24:34.204Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T10:24:34.212Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T10:24:34.212Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T10:24:34.216Z","level":"warn","component":"AUTH","message":"[AUTH][SECURITY] Management password is set to the well-known default \"CHANGEME\" (INITIAL_PASSWORD in .env.example). Anyone can sign in to the dashboard with it — change it immediately via the dashboard or a strong INITIAL_PASSWORD."}
+{"timestamp":"2026-10-05T10:24:34.647Z","level":"info","component":"AUTH","message":"[AUTH] Migrated INITIAL_PASSWORD to bcrypt hash during startup"}
+{"timestamp":"2026-10-05T10:24:34.660Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, systemPrompt, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T10:24:34.664Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=5, skipped=0, removed=0, failed=0"}
+{"timestamp":"2026-10-05T10:24:34.666Z","level":"info","component":"STARTUP","message":"[STARTUP] Migrated Codex connection defaults for 0 connection(s)"}
+{"timestamp":"2026-10-05T10:24:34.669Z","level":"info","component":"STARTUP","message":"[STARTUP] Synced migrated Codex connection defaults to cloud"}
+{"timestamp":"2026-10-05T10:24:34.670Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T10:24:35.136Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 3600s)"}
+{"timestamp":"2026-10-05T10:24:35.137Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T10:24:35.142Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T10:24:35.150Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T10:24:35.151Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T10:24:35.248Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T10:24:35.325Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T10:24:35.333Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T10:24:35.334Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T10:24:35.358Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T10:24:35.359Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T10:24:35.365Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T10:24:35.366Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T10:24:35.371Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T10:24:35.374Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T10:24:35.381Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T10:24:35.382Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T10:24:35.383Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T10:24:35.383Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T10:24:35.384Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T10:24:40.103Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T10:24:40.104Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T10:24:40.111Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Cycle complete: 0/0 synced in 2ms"}
+{"timestamp":"2026-10-05T10:24:40.450Z","level":"info","component":"LocalHealthCheck","message":"[LocalHealthCheck] Starting local provider health check (initial delay 15s)"}
+{"timestamp":"2026-10-05T10:24:40.477Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T10:24:40.517Z","level":"info","component":"app","message":"kill deprecated models complete."}
+{"timestamp":"2026-10-05T10:24:40.753Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] synced 238 model intelligence entries from Arena leaderboards"}
+{"timestamp":"2026-10-05T10:24:40.754Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Initial sync complete: 238 model intelligence entries"}
+{"timestamp":"2026-10-05T10:24:40.947Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync complete: 121 providers"}
+{"timestamp":"2026-10-05T10:25:05.156Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T10:25:05.157Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T10:25:05.158Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T10:25:05.160Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T10:25:05.160Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T10:25:05.161Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.162Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.163Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.164Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.165Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T10:25:05.166Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.166Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.167Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.169Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.170Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T10:25:05.172Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T10:25:05.173Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 conversation_turn_nodes older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.174Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 orphaned agentic_conversations older than 30 days"}
+{"timestamp":"2026-10-05T10:25:05.175Z","level":"info","component":"Cleanup","message":"[Cleanup] Batch auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T10:25:05.175Z","level":"info","component":"Cleanup","message":"[Cleanup] Expired-file auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T10:25:05.176Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T10:25:16.534Z","level":"info","component":"DB","message":"[DB] Added api_keys.blocked_models column"}
+{"timestamp":"2026-10-05T10:25:16.540Z","level":"info","component":"DB","message":"[DB] Added api_keys.allowed_connections column"}
+{"timestamp":"2026-10-05T10:25:16.547Z","level":"info","component":"DB","message":"[DB] Added api_keys.auto_resolve column"}
+{"timestamp":"2026-10-05T10:25:16.557Z","level":"info","component":"DB","message":"[DB] Added api_keys.is_active column"}
+{"timestamp":"2026-10-05T10:25:16.570Z","level":"info","component":"DB","message":"[DB] Added api_keys.access_schedule column"}
+{"timestamp":"2026-10-05T10:25:16.580Z","level":"info","component":"DB","message":"[DB] Added api_keys.max_requests_per_day column"}
+{"timestamp":"2026-10-05T10:25:16.591Z","level":"info","component":"DB","message":"[DB] Added api_keys.max_requests_per_minute column"}
+{"timestamp":"2026-10-05T10:25:16.599Z","level":"info","component":"DB","message":"[DB] Added api_keys.max_sessions column"}
+{"timestamp":"2026-10-05T10:25:16.605Z","level":"info","component":"DB","message":"[DB] Added api_keys.rate_limits column"}
+{"timestamp":"2026-10-05T10:25:16.611Z","level":"info","component":"DB","message":"[DB] Added api_keys.is_banned column"}
+{"timestamp":"2026-10-05T10:25:16.619Z","level":"info","component":"DB","message":"[DB] Added api_keys.key_hash column"}
+{"timestamp":"2026-10-05T10:25:16.624Z","level":"info","component":"DB","message":"[DB] Added api_keys.proxy_id column"}
+{"timestamp":"2026-10-05T10:25:16.632Z","level":"info","component":"DB","message":"[DB] Added api_keys.allowed_endpoints column"}
+{"timestamp":"2026-10-05T10:25:16.640Z","level":"info","component":"DB","message":"[DB] Added api_keys.allow_usage_command column"}
+{"timestamp":"2026-10-05T10:25:16.647Z","level":"info","component":"DB","message":"[DB] Added api_keys.chaos_mode_enabled column"}
+{"timestamp":"2026-10-05T10:25:16.658Z","level":"info","component":"DB","message":"[DB] Added api_keys.allow_auto_combos column"}
+{"timestamp":"2026-10-05T10:25:16.668Z","level":"info","component":"DB","message":"[DB] Added api_keys.catalog_scope column"}
+{"timestamp":"2026-10-05T10:25:17.769Z","level":"error","component":"app","message":"(node:18292) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)"}
+{"timestamp":"2026-10-05T10:25:20.081Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: a18e2099 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T10:25:34.160Z","level":"info","component":"ProxyHealth","message":"[ProxyHealth] Starting proxy health scheduler (interval: 600000ms)"}
+{"timestamp":"2026-10-05T10:25:35.434Z","level":"info","component":"LiveWS","message":"[LiveWS] Client disconnected: a18e2099 [0 remaining]"}
+{"timestamp":"2026-10-05T10:25:35.517Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T10:25:35.843Z","level":"warn","component":"app","message":"10:25:35.843 [AUTO] auto/vision:pro matched no connected models; returning an empty pool. Set OMNIROUTE_AUTO_FREE_FALLBACK_TO_FULL_POOL=true to restore the legacy \"use full pool\" behavior."}
+{"timestamp":"2026-10-05T10:25:35.846Z","level":"warn","component":"app","message":"10:25:35.846 [AUTO] auto/subscription: no plan-included connection has verified quota headroom; returning an empty pool rather than falling back to paid capacity."}
+{"timestamp":"2026-10-05T10:25:35.851Z","level":"warn","component":"app","message":"10:25:35.851 [AUTO] auto/coding:pro matched no connected models; returning an empty pool. Set OMNIROUTE_AUTO_FREE_FALLBACK_TO_FULL_POOL=true to restore the legacy \"use full pool\" behavior."}
+{"timestamp":"2026-10-05T10:25:35.852Z","level":"warn","component":"app","message":"10:25:35.852 [AUTO] auto/reasoning:pro matched no connected models; returning an empty pool. Set OMNIROUTE_AUTO_FREE_FALLBACK_TO_FULL_POOL=true to restore the legacy \"use full pool\" behavior."}
+{"timestamp":"2026-10-05T10:25:35.872Z","level":"warn","component":"app","message":"10:25:35.872 [AUTO] auto/minimax matched no connected models; returning an empty pool."}
+{"timestamp":"2026-10-05T10:25:35.874Z","level":"warn","component":"app","message":"10:25:35.874 [AUTO] auto/zai matched no connected models; returning an empty pool."}
+{"timestamp":"2026-10-05T10:25:45.791Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: 0c7ac124 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T10:26:04.184Z","level":"info","component":"ModelSync","message":"[ModelSync] No connections with autoSync enabled — skipping cycle"}
+{"timestamp":"2026-10-05T22:22:43.035Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T22:22:43.038Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T22:22:43.038Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T22:22:43.039Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T22:22:43.040Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T22:22:43.041Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T22:22:43.043Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T22:22:43.264Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T22:22:43.265Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T22:22:43.289Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 6h (phase offset +45m)"}
+{"timestamp":"2026-10-05T22:22:43.414Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T22:22:43.617Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T22:22:43.618Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T22:22:44.299Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, systemPrompt, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T22:22:44.352Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=0, skipped=5, removed=0, failed=0"}
+{"timestamp":"2026-10-05T22:22:44.354Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T22:22:48.782Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 3600s)"}
+{"timestamp":"2026-10-05T22:22:48.783Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T22:22:48.846Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T22:22:49.010Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T22:22:49.011Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T22:22:53.105Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T22:22:53.254Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T22:22:53.323Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T22:22:53.324Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T22:22:53.328Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T22:22:53.329Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Initial sync complete: 0 model intelligence entries"}
+{"timestamp":"2026-10-05T22:22:53.329Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T22:22:53.341Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T22:22:53.342Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T22:22:53.387Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T22:22:53.421Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T22:22:53.541Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T22:22:53.542Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T22:22:53.543Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T22:22:53.544Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T22:22:53.545Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T22:25:30.510Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T22:25:30.512Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T22:25:30.529Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T22:25:30.711Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T22:25:30.714Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T22:25:30.716Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T22:25:30.722Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T22:25:30.723Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T22:25:30.727Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.731Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.734Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.736Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.738Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T22:25:30.740Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.742Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.744Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.750Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.753Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T22:25:30.801Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T22:25:30.805Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 conversation_turn_nodes older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.807Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 orphaned agentic_conversations older than 30 days"}
+{"timestamp":"2026-10-05T22:25:30.809Z","level":"info","component":"Cleanup","message":"[Cleanup] Batch auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T22:25:30.810Z","level":"info","component":"Cleanup","message":"[Cleanup] Expired-file auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T22:25:30.811Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T22:25:30.814Z","level":"info","component":"VacuumScheduler","message":"[VacuumScheduler] Full VACUUM requested (cleanup left 2 free page(s) that auto_vacuum=0 cannot reclaim incrementally); deferred to the scheduled run at 2026-10-06T15:00:00.000Z."}
+{"timestamp":"2026-10-05T22:25:30.815Z","level":"info","component":"Cleanup","message":"[Cleanup] Space reclamation after startup cleanup: auto_vacuum=NONE — 2 free page(s) left for the scheduled VACUUM."}
+{"timestamp":"2026-10-05T22:25:30.827Z","level":"warn","component":"ProxyFetch","message":"[ProxyFetch] Direct response-start timeout (30000ms) on pooled dispatcher — retrying on fresh no-keep-alive dispatcher: openrouter.ai"}
+{"timestamp":"2026-10-05T22:25:30.837Z","level":"warn","component":"ProxyFetch","message":"[ProxyFetch] Direct response-start timeout (30000ms) on pooled dispatcher — retrying on fresh no-keep-alive dispatcher: openrouter.ai"}
+{"timestamp":"2026-10-05T22:25:30.839Z","level":"warn","component":"ProxyFetch","message":"[ProxyFetch] Direct response-start timeout (30000ms) on pooled dispatcher — retrying on fresh no-keep-alive dispatcher: openrouter.ai"}
+{"timestamp":"2026-10-05T22:25:30.848Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Cycle complete: 0/0 synced in 5ms"}
+{"timestamp":"2026-10-05T22:25:30.856Z","level":"warn","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync failed: The operation was aborted due to timeout"}
+{"timestamp":"2026-10-05T22:25:30.864Z","level":"info","component":"ProxyHealth","message":"[ProxyHealth] Starting proxy health scheduler (interval: 600000ms)"}
+{"timestamp":"2026-10-05T22:25:30.916Z","level":"info","component":"ModelSync","message":"[ModelSync] No connections with autoSync enabled — skipping cycle"}
+{"timestamp":"2026-10-05T22:25:40.041Z","level":"info","component":"LocalHealthCheck","message":"[LocalHealthCheck] Starting local provider health check (initial delay 15s)"}
+{"timestamp":"2026-10-05T22:25:40.320Z","level":"info","component":"app","message":"kill deprecated models complete."}
+{"timestamp":"2026-10-05T22:27:21.749Z","level":"info","component":"DB","message":"[DB] WAL passive checkpoint (logFrames=271 checkpointedFrames=271 walMb=1)"}
+{"timestamp":"2026-10-05T22:32:21.644Z","level":"info","component":"DB","message":"[DB] WAL passive checkpoint (logFrames=28 checkpointedFrames=28 walMb=1)"}
+{"timestamp":"2026-10-05T22:37:21.666Z","level":"info","component":"DB","message":"[DB] WAL passive checkpoint (logFrames=48 checkpointedFrames=48 walMb=1)"}
+{"timestamp":"2026-10-05T22:39:21.886Z","level":"info","component":"DB","message":"[DB] Added api_keys.allow_auto_combos column"}
+{"timestamp":"2026-10-05T22:39:21.896Z","level":"info","component":"DB","message":"[DB] Added api_keys.catalog_scope column"}
+{"timestamp":"2026-10-05T22:39:23.735Z","level":"error","component":"app","message":"(node:7284) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)"}
+{"timestamp":"2026-10-05T22:39:32.150Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: 4cd6d351 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T22:42:19.218Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T22:42:19.220Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T22:42:19.220Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T22:42:19.221Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T22:42:19.221Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T22:42:19.222Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T22:42:19.224Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T22:42:19.247Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T22:42:19.249Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T22:42:19.254Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 6h (phase offset +45m)"}
+{"timestamp":"2026-10-05T22:42:19.322Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T22:42:19.336Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T22:42:19.337Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T22:42:19.378Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, systemPrompt, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T22:42:19.383Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=0, skipped=5, removed=0, failed=0"}
+{"timestamp":"2026-10-05T22:42:19.386Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T22:42:20.424Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 3600s)"}
+{"timestamp":"2026-10-05T22:42:20.425Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T22:42:20.432Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T22:42:20.447Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T22:42:20.448Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T22:42:20.615Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T22:42:20.721Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T22:42:20.736Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T22:42:20.737Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T22:42:20.740Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T22:42:20.740Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Initial sync complete: 0 model intelligence entries"}
+{"timestamp":"2026-10-05T22:42:20.741Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T22:42:20.754Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T22:42:20.756Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T22:42:20.792Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T22:42:20.796Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T22:42:20.810Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T22:42:20.811Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T22:42:20.812Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T22:42:20.813Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T22:42:20.814Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T22:42:32.420Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T22:42:32.421Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T22:42:32.434Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T22:42:32.474Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Cycle complete: 0/0 synced in 4ms"}
+{"timestamp":"2026-10-05T22:42:34.306Z","level":"info","component":"LocalHealthCheck","message":"[LocalHealthCheck] Starting local provider health check (initial delay 15s)"}
+{"timestamp":"2026-10-05T22:42:35.002Z","level":"info","component":"app","message":"kill deprecated models complete."}
+{"timestamp":"2026-10-05T22:42:35.821Z","level":"warn","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync failed: The operation was aborted due to timeout"}
+{"timestamp":"2026-10-05T22:42:50.465Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T22:42:50.468Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T22:42:50.470Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T22:42:50.474Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T22:42:50.475Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T22:42:50.479Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.483Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.486Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.487Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.491Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T22:42:50.495Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.497Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.499Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.503Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.505Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T22:42:50.511Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T22:42:50.514Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 conversation_turn_nodes older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.517Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 orphaned agentic_conversations older than 30 days"}
+{"timestamp":"2026-10-05T22:42:50.518Z","level":"info","component":"Cleanup","message":"[Cleanup] Batch auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T22:42:50.519Z","level":"info","component":"Cleanup","message":"[Cleanup] Expired-file auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T22:42:50.520Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T22:42:50.523Z","level":"info","component":"VacuumScheduler","message":"[VacuumScheduler] Full VACUUM requested (cleanup left 2 free page(s) that auto_vacuum=0 cannot reclaim incrementally); deferred to the scheduled run at 2026-10-11T15:00:00.000Z."}
+{"timestamp":"2026-10-05T22:42:50.525Z","level":"info","component":"Cleanup","message":"[Cleanup] Space reclamation after startup cleanup: auto_vacuum=NONE — 2 free page(s) left for the scheduled VACUUM."}
+{"timestamp":"2026-10-05T22:42:53.164Z","level":"info","component":"DB","message":"[DB] Added api_keys.allow_auto_combos column"}
+{"timestamp":"2026-10-05T22:42:53.185Z","level":"info","component":"DB","message":"[DB] Added api_keys.catalog_scope column"}
+{"timestamp":"2026-10-05T22:42:55.371Z","level":"error","component":"app","message":"(node:13648) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)"}
+{"timestamp":"2026-10-05T22:43:03.476Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: ba2e29d1 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T22:43:19.212Z","level":"info","component":"ProxyHealth","message":"[ProxyHealth] Starting proxy health scheduler (interval: 600000ms)"}
+{"timestamp":"2026-10-05T22:43:49.258Z","level":"info","component":"ModelSync","message":"[ModelSync] No connections with autoSync enabled — skipping cycle"}
+{"timestamp":"2026-10-05T22:47:17.850Z","level":"info","component":"DB","message":"[DB] WAL passive checkpoint (logFrames=308 checkpointedFrames=308 walMb=1)"}
+{"timestamp":"2026-10-05T22:48:07.345Z","level":"info","component":"LiveWS","message":"[LiveWS] Client disconnected: ba2e29d1 [0 remaining]"}
+{"timestamp":"2026-10-05T22:48:17.822Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: 7702b0fa (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T22:52:17.834Z","level":"info","component":"DB","message":"[DB] WAL passive checkpoint (logFrames=20 checkpointedFrames=20 walMb=1)"}
+{"timestamp":"2026-10-05T22:57:17.839Z","level":"info","component":"DB","message":"[DB] WAL passive checkpoint (logFrames=27 checkpointedFrames=27 walMb=1)"}
+{"timestamp":"2026-10-05T23:02:17.851Z","level":"info","component":"DB","message":"[DB] WAL passive checkpoint (logFrames=27 checkpointedFrames=27 walMb=1)"}
+{"timestamp":"2026-10-05T23:02:45.402Z","level":"info","component":"LiveWS","message":"[LiveWS] Client disconnected: 7702b0fa [0 remaining]"}
+{"timestamp":"2026-10-05T23:03:00.310Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: 61e5f4be (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T23:03:08.045Z","level":"info","component":"LiveWS","message":"[LiveWS] Client disconnected: 61e5f4be [0 remaining]"}
+{"timestamp":"2026-10-05T23:07:17.868Z","level":"info","component":"DB","message":"[DB] WAL passive checkpoint (logFrames=29 checkpointedFrames=29 walMb=1)"}
+{"timestamp":"2026-10-05T23:11:07.210Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T23:11:07.220Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T23:11:07.222Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T23:11:07.224Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T23:11:07.226Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T23:11:07.230Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T23:11:07.239Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T23:11:07.315Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T23:11:07.323Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T23:11:07.339Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 6h (phase offset +45m)"}
+{"timestamp":"2026-10-05T23:11:07.514Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T23:11:07.549Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T23:11:07.551Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T23:11:07.648Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, systemPrompt, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T23:11:07.657Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=0, skipped=5, removed=0, failed=0"}
+{"timestamp":"2026-10-05T23:11:07.661Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T23:11:09.210Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 3600s)"}
+{"timestamp":"2026-10-05T23:11:09.213Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T23:11:09.223Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T23:11:09.249Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T23:11:09.250Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T23:11:09.660Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T23:11:09.911Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T23:11:09.930Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T23:11:09.931Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:11:09.936Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T23:11:09.937Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Initial sync complete: 0 model intelligence entries"}
+{"timestamp":"2026-10-05T23:11:09.938Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T23:11:09.954Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T23:11:09.956Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:11:10.024Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T23:11:10.031Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T23:11:10.050Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T23:11:10.053Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T23:11:10.054Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T23:11:10.056Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T23:11:10.058Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T23:11:14.356Z","level":"info","component":"LocalHealthCheck","message":"[LocalHealthCheck] Starting local provider health check (initial delay 15s)"}
+{"timestamp":"2026-10-05T23:11:32.309Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T23:11:32.310Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T23:11:32.323Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T23:11:32.348Z","level":"warn","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync failed: The operation was aborted due to timeout"}
+{"timestamp":"2026-10-05T23:11:39.265Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T23:11:39.269Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T23:11:39.273Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:11:39.277Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T23:11:39.279Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T23:11:39.283Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.289Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.292Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.294Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.297Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T23:11:39.300Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.303Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.308Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.312Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.316Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:11:39.322Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T23:11:39.327Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 conversation_turn_nodes older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.330Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 orphaned agentic_conversations older than 30 days"}
+{"timestamp":"2026-10-05T23:11:39.331Z","level":"info","component":"Cleanup","message":"[Cleanup] Batch auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:11:39.332Z","level":"info","component":"Cleanup","message":"[Cleanup] Expired-file auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:11:39.334Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T23:12:07.206Z","level":"info","component":"ProxyHealth","message":"[ProxyHealth] Starting proxy health scheduler (interval: 600000ms)"}
+{"timestamp":"2026-10-05T23:12:37.362Z","level":"info","component":"ModelSync","message":"[ModelSync] No connections with autoSync enabled — skipping cycle"}
+{"timestamp":"2026-10-05T23:12:56.782Z","level":"error","component":"app","message":"(node:22020) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)"}
+{"timestamp":"2026-10-05T23:13:04.607Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: 416b6684 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T23:15:52.931Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T23:15:52.932Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T23:15:52.932Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T23:15:52.933Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T23:15:52.934Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T23:15:52.935Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T23:15:52.937Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T23:15:52.950Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T23:15:52.951Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T23:15:52.956Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 6h (phase offset +45m)"}
+{"timestamp":"2026-10-05T23:15:53.008Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T23:15:53.017Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T23:15:53.018Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T23:15:53.042Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, systemPrompt, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T23:15:53.046Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=0, skipped=5, removed=0, failed=0"}
+{"timestamp":"2026-10-05T23:15:53.049Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T23:15:53.948Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 3600s)"}
+{"timestamp":"2026-10-05T23:15:53.949Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T23:15:53.953Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T23:15:53.969Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T23:15:53.970Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T23:15:54.124Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T23:15:54.250Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T23:15:54.260Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T23:15:54.261Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:15:54.264Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T23:15:54.264Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Initial sync complete: 0 model intelligence entries"}
+{"timestamp":"2026-10-05T23:15:54.265Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T23:15:54.275Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T23:15:54.277Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:15:54.320Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T23:15:54.323Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T23:15:54.333Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T23:15:54.334Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T23:15:54.335Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T23:15:54.336Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T23:15:54.337Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T23:16:01.342Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T23:16:01.343Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T23:16:01.352Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T23:16:02.383Z","level":"info","component":"LocalHealthCheck","message":"[LocalHealthCheck] Starting local provider health check (initial delay 15s)"}
+{"timestamp":"2026-10-05T23:16:06.379Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync complete: 120 providers"}
+{"timestamp":"2026-10-05T23:16:23.988Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T23:16:23.992Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T23:16:23.995Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:16:24.002Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T23:16:24.004Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T23:16:24.008Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.013Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.017Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.021Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.025Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T23:16:24.028Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.032Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.036Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.043Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.046Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:16:24.055Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T23:16:24.059Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 conversation_turn_nodes older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.063Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 orphaned agentic_conversations older than 30 days"}
+{"timestamp":"2026-10-05T23:16:24.068Z","level":"info","component":"Cleanup","message":"[Cleanup] Batch auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:16:24.070Z","level":"info","component":"Cleanup","message":"[Cleanup] Expired-file auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:16:24.072Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T23:16:52.932Z","level":"info","component":"ProxyHealth","message":"[ProxyHealth] Starting proxy health scheduler (interval: 600000ms)"}
+{"timestamp":"2026-10-05T23:17:11.245Z","level":"error","component":"app","message":"(node:19868) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)"}
+{"timestamp":"2026-10-05T23:17:18.209Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: 8c58cf16 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T23:17:22.970Z","level":"info","component":"ModelSync","message":"[ModelSync] No connections with autoSync enabled — skipping cycle"}
+{"timestamp":"2026-10-05T23:18:32.026Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: cf920a79 (127.0.0.1) [2 total]"}
+{"timestamp":"2026-10-05T23:18:36.992Z","level":"info","component":"LiveWS","message":"[LiveWS] Client disconnected: 8c58cf16 [1 remaining]"}
+{"timestamp":"2026-10-05T23:18:38.169Z","level":"info","component":"LiveWS","message":"[LiveWS] Client disconnected: cf920a79 [0 remaining]"}
+{"timestamp":"2026-10-05T23:20:35.940Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T23:20:35.942Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T23:20:35.942Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T23:20:35.943Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T23:20:35.945Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T23:20:35.946Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T23:20:35.949Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T23:20:35.962Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T23:20:35.964Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T23:20:35.969Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 6h (phase offset +45m)"}
+{"timestamp":"2026-10-05T23:20:36.024Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T23:20:36.033Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T23:20:36.034Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T23:20:36.058Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, systemPrompt, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T23:20:36.062Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=0, skipped=5, removed=0, failed=0"}
+{"timestamp":"2026-10-05T23:20:36.065Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T23:20:36.886Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 3600s)"}
+{"timestamp":"2026-10-05T23:20:36.887Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T23:20:36.891Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T23:20:36.906Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T23:20:36.907Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T23:20:37.091Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T23:20:37.227Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T23:20:37.240Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T23:20:37.241Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:20:37.243Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T23:20:37.244Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Initial sync complete: 0 model intelligence entries"}
+{"timestamp":"2026-10-05T23:20:37.245Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T23:20:37.253Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T23:20:37.254Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:20:37.296Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T23:20:37.301Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T23:20:37.311Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T23:20:37.313Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T23:20:37.314Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T23:20:37.315Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T23:20:37.316Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T23:20:46.061Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T23:20:46.063Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T23:20:46.074Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T23:20:47.743Z","level":"info","component":"LocalHealthCheck","message":"[LocalHealthCheck] Starting local provider health check (initial delay 15s)"}
+{"timestamp":"2026-10-05T23:20:52.305Z","level":"warn","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync failed: The operation was aborted due to timeout"}
+{"timestamp":"2026-10-05T23:21:06.921Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T23:21:06.925Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T23:21:06.929Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:21:06.932Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T23:21:06.933Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T23:21:06.935Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.939Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.941Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.944Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.946Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T23:21:06.948Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.950Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.951Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.953Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.954Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:21:06.959Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T23:21:06.962Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 conversation_turn_nodes older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.965Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 orphaned agentic_conversations older than 30 days"}
+{"timestamp":"2026-10-05T23:21:06.966Z","level":"info","component":"Cleanup","message":"[Cleanup] Batch auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:21:06.967Z","level":"info","component":"Cleanup","message":"[Cleanup] Expired-file auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:21:06.968Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T23:21:35.955Z","level":"info","component":"ProxyHealth","message":"[ProxyHealth] Starting proxy health scheduler (interval: 600000ms)"}
+{"timestamp":"2026-10-05T23:22:05.981Z","level":"info","component":"ModelSync","message":"[ModelSync] No connections with autoSync enabled — skipping cycle"}
+{"timestamp":"2026-10-05T23:22:49.163Z","level":"error","component":"app","message":"(node:7284) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)"}
+{"timestamp":"2026-10-05T23:22:56.355Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: 9641bb92 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T23:23:01.356Z","level":"info","component":"LiveWS","message":"[LiveWS] Client disconnected: 9641bb92 [0 remaining]"}
+{"timestamp":"2026-10-05T23:23:17.616Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: d063d98c (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T23:25:34.788Z","level":"info","component":"DB","message":"[DB] WAL passive checkpoint (logFrames=143 checkpointedFrames=143 walMb=1)"}
+{"timestamp":"2026-10-05T23:28:19.123Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T23:28:19.124Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T23:28:19.124Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T23:28:19.125Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T23:28:19.125Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T23:28:19.126Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T23:28:19.128Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T23:28:19.142Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T23:28:19.143Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T23:28:19.146Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 6h (phase offset +45m)"}
+{"timestamp":"2026-10-05T23:28:19.208Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T23:28:19.218Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T23:28:19.219Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T23:28:19.251Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, systemPrompt, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T23:28:19.256Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=0, skipped=5, removed=0, failed=0"}
+{"timestamp":"2026-10-05T23:28:19.258Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T23:28:20.137Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 3600s)"}
+{"timestamp":"2026-10-05T23:28:20.138Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T23:28:20.146Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T23:28:20.165Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T23:28:20.165Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T23:28:20.364Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T23:28:20.522Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T23:28:20.533Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T23:28:20.535Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:28:20.537Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T23:28:20.538Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Initial sync complete: 0 model intelligence entries"}
+{"timestamp":"2026-10-05T23:28:20.539Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T23:28:20.548Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T23:28:20.550Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:28:20.588Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T23:28:20.592Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T23:28:20.607Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T23:28:20.608Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T23:28:20.609Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T23:28:20.610Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T23:28:20.611Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T23:28:28.753Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T23:28:28.754Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T23:28:28.761Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T23:28:28.790Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Cycle complete: 0/0 synced in 3ms"}
+{"timestamp":"2026-10-05T23:28:29.970Z","level":"info","component":"LocalHealthCheck","message":"[LocalHealthCheck] Starting local provider health check (initial delay 15s)"}
+{"timestamp":"2026-10-05T23:28:30.195Z","level":"info","component":"app","message":"kill deprecated models complete."}
+{"timestamp":"2026-10-05T23:28:35.662Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync complete: 120 providers"}
+{"timestamp":"2026-10-05T23:28:50.166Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T23:28:50.168Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T23:28:50.170Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:28:50.172Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T23:28:50.173Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T23:28:50.174Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.176Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.177Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.177Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.179Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T23:28:50.180Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.181Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.182Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.184Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.185Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:28:50.187Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T23:28:50.189Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 conversation_turn_nodes older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.190Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 orphaned agentic_conversations older than 30 days"}
+{"timestamp":"2026-10-05T23:28:50.191Z","level":"info","component":"Cleanup","message":"[Cleanup] Batch auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:28:50.192Z","level":"info","component":"Cleanup","message":"[Cleanup] Expired-file auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:28:50.193Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T23:28:50.194Z","level":"info","component":"VacuumScheduler","message":"[VacuumScheduler] Full VACUUM requested (cleanup left 1 free page(s) that auto_vacuum=0 cannot reclaim incrementally); deferred to the scheduled run at 2026-10-11T15:00:00.000Z."}
+{"timestamp":"2026-10-05T23:28:50.195Z","level":"info","component":"Cleanup","message":"[Cleanup] Space reclamation after startup cleanup: auto_vacuum=NONE — 1 free page(s) left for the scheduled VACUUM."}
+{"timestamp":"2026-10-05T23:28:58.298Z","level":"info","component":"DB","message":"[DB] Added api_keys.allow_auto_combos column"}
+{"timestamp":"2026-10-05T23:28:58.308Z","level":"info","component":"DB","message":"[DB] Added api_keys.catalog_scope column"}
+{"timestamp":"2026-10-05T23:28:59.858Z","level":"error","component":"app","message":"(node:23656) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)"}
+{"timestamp":"2026-10-05T23:29:07.398Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: fd0c94c6 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T23:29:19.134Z","level":"info","component":"ProxyHealth","message":"[ProxyHealth] Starting proxy health scheduler (interval: 600000ms)"}
+{"timestamp":"2026-10-05T23:29:49.153Z","level":"info","component":"ModelSync","message":"[ModelSync] No connections with autoSync enabled — skipping cycle"}
+{"timestamp":"2026-10-05T23:30:57.654Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T23:30:57.655Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T23:30:57.656Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T23:30:57.656Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T23:30:57.657Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T23:30:57.658Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T23:30:57.659Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T23:30:57.670Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T23:30:57.671Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T23:30:57.675Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 6h (phase offset +45m)"}
+{"timestamp":"2026-10-05T23:30:57.738Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T23:30:57.750Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T23:30:57.751Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T23:30:57.782Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, systemPrompt, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T23:30:57.785Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=0, skipped=5, removed=0, failed=0"}
+{"timestamp":"2026-10-05T23:30:57.787Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T23:30:58.519Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 3600s)"}
+{"timestamp":"2026-10-05T23:30:58.520Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T23:30:58.524Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T23:30:58.534Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T23:30:58.535Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T23:30:58.672Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T23:30:58.793Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T23:30:58.802Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T23:30:58.802Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:30:58.842Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T23:30:58.843Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T23:30:58.851Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T23:30:58.851Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:30:58.857Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T23:30:58.860Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T23:30:58.866Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T23:30:58.867Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T23:30:58.867Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T23:30:58.868Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T23:30:58.868Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T23:31:04.613Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T23:31:04.614Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T23:31:04.624Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T23:31:04.733Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Cycle complete: 0/0 synced in 10ms"}
+{"timestamp":"2026-10-05T23:31:05.857Z","level":"info","component":"LocalHealthCheck","message":"[LocalHealthCheck] Starting local provider health check (initial delay 15s)"}
+{"timestamp":"2026-10-05T23:31:06.032Z","level":"info","component":"app","message":"kill deprecated models complete."}
+{"timestamp":"2026-10-05T23:31:07.099Z","level":"warn","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Failed to fetch \"code\" leaderboard: Arena API fetch failed for \"code\" [429]: "}
+{"timestamp":"2026-10-05T23:31:07.112Z","level":"warn","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Failed to fetch \"text\" leaderboard: Arena API fetch failed for \"text\" [429]: "}
+{"timestamp":"2026-10-05T23:31:07.113Z","level":"warn","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Sync failed: All Arena leaderboard fetches failed: Arena API fetch failed for \"code\" [429]: ; Arena API fetch failed for \"text\" [429]: "}
+{"timestamp":"2026-10-05T23:31:09.242Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync complete: 120 providers"}
+{"timestamp":"2026-10-05T23:31:22.551Z","level":"info","component":"DB","message":"[DB] Added api_keys.allow_auto_combos column"}
+{"timestamp":"2026-10-05T23:31:22.561Z","level":"info","component":"DB","message":"[DB] Added api_keys.catalog_scope column"}
+{"timestamp":"2026-10-05T23:31:24.315Z","level":"error","component":"app","message":"(node:4888) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)"}
+{"timestamp":"2026-10-05T23:31:28.551Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T23:31:28.554Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T23:31:28.556Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:31:28.560Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T23:31:28.563Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T23:31:28.566Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.569Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.571Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.572Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.575Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T23:31:28.579Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.581Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.583Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.588Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.591Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:31:28.594Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T23:31:28.596Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 conversation_turn_nodes older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.598Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 orphaned agentic_conversations older than 30 days"}
+{"timestamp":"2026-10-05T23:31:28.600Z","level":"info","component":"Cleanup","message":"[Cleanup] Batch auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:31:28.600Z","level":"info","component":"Cleanup","message":"[Cleanup] Expired-file auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:31:28.601Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T23:31:28.604Z","level":"info","component":"VacuumScheduler","message":"[VacuumScheduler] Full VACUUM requested (cleanup left 1 free page(s) that auto_vacuum=0 cannot reclaim incrementally); deferred to the scheduled run at 2026-10-11T15:00:00.000Z."}
+{"timestamp":"2026-10-05T23:31:28.605Z","level":"info","component":"Cleanup","message":"[Cleanup] Space reclamation after startup cleanup: auto_vacuum=NONE — 1 free page(s) left for the scheduled VACUUM."}
+{"timestamp":"2026-10-05T23:31:32.185Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: fe068a23 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T23:31:47.641Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: dcacb853 (127.0.0.1) [2 total]"}
+{"timestamp":"2026-10-05T23:37:47.679Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T23:37:47.680Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T23:37:47.681Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T23:37:47.681Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T23:37:47.682Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T23:37:47.683Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T23:37:47.685Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T23:37:47.697Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T23:37:47.698Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T23:37:47.703Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 6h (phase offset +45m)"}
+{"timestamp":"2026-10-05T23:37:47.754Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T23:37:47.761Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T23:37:47.762Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T23:37:47.784Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, systemPrompt, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T23:37:47.787Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=0, skipped=5, removed=0, failed=0"}
+{"timestamp":"2026-10-05T23:37:47.789Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T23:37:48.554Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 3600s)"}
+{"timestamp":"2026-10-05T23:37:48.555Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T23:37:48.560Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T23:37:48.575Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T23:37:48.576Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T23:37:48.735Z","level":"warn","component":"REDIS","message":"[REDIS] REDIS_URL is not set in production. Using in-memory rate limiting."}
+{"timestamp":"2026-10-05T23:37:48.857Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T23:37:48.867Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T23:37:48.868Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:37:48.872Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T23:37:48.873Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T23:37:48.884Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T23:37:48.885Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:37:48.921Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T23:37:48.924Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T23:37:48.933Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T23:37:48.935Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T23:37:48.936Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T23:37:48.936Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T23:37:48.937Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T23:37:56.343Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T23:37:56.345Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T23:37:56.374Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T23:37:57.581Z","level":"info","component":"LocalHealthCheck","message":"[LocalHealthCheck] Starting local provider health check (initial delay 15s)"}
+{"timestamp":"2026-10-05T23:38:00.972Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync complete: 120 providers"}
+{"timestamp":"2026-10-05T23:38:03.251Z","level":"error","component":"app","message":"(node:8516) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.\n(Use `node --trace-deprecation ...` to show where the warning was created)"}
+{"timestamp":"2026-10-05T23:38:11.611Z","level":"info","component":"LiveWS","message":"[LiveWS] Client connected: 43619bd2 (127.0.0.1) [1 total]"}
+{"timestamp":"2026-10-05T23:38:18.591Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T23:38:18.592Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T23:38:18.593Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:38:18.596Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T23:38:18.596Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T23:38:18.597Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.599Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.600Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.601Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.603Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T23:38:18.604Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.605Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.607Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.608Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.610Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:38:18.613Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T23:38:18.616Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 conversation_turn_nodes older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.618Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 orphaned agentic_conversations older than 30 days"}
+{"timestamp":"2026-10-05T23:38:18.619Z","level":"info","component":"Cleanup","message":"[Cleanup] Batch auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:38:18.619Z","level":"info","component":"Cleanup","message":"[Cleanup] Expired-file auto-cleanup disabled (BATCH_AND_FILE_AUTO_CLEANUP_ENABLED=false); skipping."}
+{"timestamp":"2026-10-05T23:38:18.620Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T23:38:47.685Z","level":"info","component":"ProxyHealth","message":"[ProxyHealth] Starting proxy health scheduler (interval: 600000ms)"}
+{"timestamp":"2026-10-05T23:39:07.886Z","level":"info","component":"Shutdown","message":"[Shutdown] Graceful shutdown handlers registered."}
+{"timestamp":"2026-10-05T23:39:07.893Z","level":"info","component":"STARTUP","message":"[STARTUP] Spend batch writer started"}
+{"timestamp":"2026-10-05T23:39:07.896Z","level":"info","component":"STARTUP","message":"[STARTUP] Guardrail registry initialized"}
+{"timestamp":"2026-10-05T23:39:07.898Z","level":"info","component":"STARTUP","message":"[STARTUP] Builtin skill handlers registered"}
+{"timestamp":"2026-10-05T23:39:07.901Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota cache background refresh started"}
+{"timestamp":"2026-10-05T23:39:07.904Z","level":"info","component":"ProviderLimitsSync","message":"[ProviderLimitsSync] Scheduler started — interval: 70m"}
+{"timestamp":"2026-10-05T23:39:07.908Z","level":"info","component":"STARTUP","message":"[STARTUP] Provider limits sync scheduler started"}
+{"timestamp":"2026-10-05T23:39:07.963Z","level":"info","component":"QuotaAutoPing","message":"[INFO] [QuotaAutoPing] scheduler started"}
+{"timestamp":"2026-10-05T23:39:07.969Z","level":"info","component":"STARTUP","message":"[STARTUP] Quota auto-ping scheduler started (opt-in, no-op until enabled)"}
+{"timestamp":"2026-10-05T23:39:07.976Z","level":"info","component":"ModelSync","message":"[ModelSync] Scheduler started — interval: 24h"}
+{"timestamp":"2026-10-05T23:39:08.000Z","level":"warn","component":"JobRegistry","message":"[JobRegistry] Skip log_export: no handler registered"}
+{"timestamp":"2026-10-05T23:39:08.016Z","level":"info","component":"STARTUP","message":"[STARTUP] Cloud/model sync background bootstrap initialized"}
+{"timestamp":"2026-10-05T23:39:08.033Z","level":"info","component":"BATCH","message":"[BATCH] Initializing batch processor polling..."}
+{"timestamp":"2026-10-05T23:39:08.035Z","level":"info","component":"STARTUP","message":"[STARTUP] Batch processor started"}
+{"timestamp":"2026-10-05T23:39:08.081Z","level":"info","component":"STARTUP","message":"[STARTUP] Runtime settings hydrated: payloadRules, modelAliases, backgroundDegradation, cliCompatProviders, cacheControl, usageTracking, healthCheckLogs, thoughtSignature, modelsDevSync, corsOrigins, ccBridgeTransforms, systemTransforms, authzBypass, bannedSignals"}
+{"timestamp":"2026-10-05T23:39:08.091Z","level":"info","component":"STARTUP","message":"[STARTUP] Model alias seed: applied=0, skipped=5, removed=0, failed=0"}
+{"timestamp":"2026-10-05T23:39:08.097Z","level":"info","component":"HOT_RELOAD","message":"[HOT_RELOAD] Runtime config hot-reload started (poll=5000ms, fsWatch=on)"}
+{"timestamp":"2026-10-05T23:39:08.361Z","level":"info","component":"CredentialHealth","message":"[CredentialHealth] Starting credential health check (initial delay 30s, interval 300s)"}
+{"timestamp":"2026-10-05T23:39:08.364Z","level":"info","component":"STARTUP","message":"[STARTUP] Credential health scheduler started"}
+{"timestamp":"2026-10-05T23:39:08.374Z","level":"info","component":"COMPLIANCE","message":"[COMPLIANCE] Audit log table initialized"}
+{"timestamp":"2026-10-05T23:39:08.459Z","level":"info","component":"STARTUP","message":"[STARTUP] Scheduled VACUUM initialized (#4437)"}
+{"timestamp":"2026-10-05T23:39:08.461Z","level":"info","component":"Cleanup","message":"[Cleanup] Background cleanup scheduler started (every 6 hours)."}
+{"timestamp":"2026-10-05T23:39:08.788Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Registered backend {\"id\":\"sqlite\",\"displayName\":\"SQLite\"}"}
+{"timestamp":"2026-10-05T23:39:08.808Z","level":"info","component":"AutoRefreshDaemon","message":"[AutoRefreshDaemon] Started — checking 0 credentials every 900s"}
+{"timestamp":"2026-10-05T23:39:08.814Z","level":"info","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:39:08.869Z","level":"info","component":"PRICING_SYNC","message":"[PRICING_SYNC] Disabled (set PRICING_SYNC_ENABLED=true to enable)"}
+{"timestamp":"2026-10-05T23:39:08.880Z","level":"info","component":"STARTUP","message":"[STARTUP] Arena ELO sync initialized"}
+{"timestamp":"2026-10-05T23:39:08.889Z","level":"info","component":"ConnectionRecovery","message":"[ConnectionRecovery] Starting proactive cooldown recovery (tick every 60s)"}
+{"timestamp":"2026-10-05T23:39:08.893Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Starting periodic sync every 86400s"}
+{"timestamp":"2026-10-05T23:39:08.902Z","level":"info","component":"STARTUP","message":"[STARTUP] OpenRouter provider stats sync initialized"}
+{"timestamp":"2026-10-05T23:39:08.914Z","level":"info","component":"STARTUP","message":"[STARTUP] Live dashboard WebSocket daemon bootstrap invoked"}
+{"timestamp":"2026-10-05T23:39:08.926Z","level":"info","component":"STARTUP","message":"[STARTUP] Embedded services bootstrap complete"}
+{"timestamp":"2026-10-05T23:39:08.929Z","level":"info","component":"MODELS_DEV","message":"[MODELS_DEV] Disabled (enable via Settings > AI or MODELS_DEV_SYNC_ENABLED=1)"}
+{"timestamp":"2026-10-05T23:39:08.933Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Configured backends {\"primary\":\"sqlite\",\"fallbacks\":[]}"}
+{"timestamp":"2026-10-05T23:39:08.935Z","level":"info","component":"SQLITE_BACKEND","message":"[INFO] [SQLITE_BACKEND] sqlite.backend.initialized"}
+{"timestamp":"2026-10-05T23:39:08.938Z","level":"info","component":"MEMORY_MANAGER","message":"[INFO] [MEMORY_MANAGER] Initialized backend {\"id\":\"sqlite\"}"}
+{"timestamp":"2026-10-05T23:39:19.580Z","level":"info","component":"EmbedWsProxy","message":"[EmbedWsProxy] Listening on 127.0.0.1:20131"}
+{"timestamp":"2026-10-05T23:39:19.583Z","level":"info","component":"LiveWS","message":"[LiveWS] Dashboard WebSocket server listening on 127.0.0.1:20132"}
+{"timestamp":"2026-10-05T23:39:19.602Z","level":"info","component":"STARTUP","message":"[STARTUP] Model catalog cache warmed"}
+{"timestamp":"2026-10-05T23:39:19.640Z","level":"info","component":"ModelSync","message":"[ModelSync] No connections with autoSync enabled — skipping cycle"}
+{"timestamp":"2026-10-05T23:39:20.444Z","level":"info","component":"app","message":"kill deprecated models complete."}
+{"timestamp":"2026-10-05T23:39:20.973Z","level":"warn","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Failed to fetch \"text\" leaderboard: Arena API fetch failed for \"text\" [429]: "}
+{"timestamp":"2026-10-05T23:39:20.982Z","level":"warn","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Failed to fetch \"code\" leaderboard: Arena API fetch failed for \"code\" [429]: "}
+{"timestamp":"2026-10-05T23:39:20.986Z","level":"warn","component":"ARENA_ELO_SYNC","message":"[ARENA_ELO_SYNC] Sync failed: All Arena leaderboard fetches failed: Arena API fetch failed for \"text\" [429]: ; Arena API fetch failed for \"code\" [429]: "}
+{"timestamp":"2026-10-05T23:39:22.343Z","level":"info","component":"OpenRouterProviderStats","message":"[OpenRouterProviderStats] Initial sync complete: 120 providers"}
+{"timestamp":"2026-10-05T23:39:39.836Z","level":"info","component":"Cleanup","message":"[Cleanup] Starting auto-cleanup..."}
+{"timestamp":"2026-10-05T23:39:39.845Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 quota_snapshots older than 90 days"}
+{"timestamp":"2026-10-05T23:39:39.854Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 call_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:39:39.863Z","level":"info","component":"Aggregation","message":"[Aggregation] usage_history rollup: 0 rows for dates before 2025-10-05"}
+{"timestamp":"2026-10-05T23:39:39.868Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 usage_history older than 365 days"}
+{"timestamp":"2026-10-05T23:39:39.879Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_analytics older than 30 days"}
+{"timestamp":"2026-10-05T23:39:39.890Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 mcp_tool_audit older than 30 days"}
+{"timestamp":"2026-10-05T23:39:39.899Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 config_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:39:39.911Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 a2a_task_events older than 30 days"}
+{"timestamp":"2026-10-05T23:39:39.921Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 memory_entries older than 180 days"}
+{"timestamp":"2026-10-05T23:39:39.930Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 domain_cost_history older than 30 days"}
+{"timestamp":"2026-10-05T23:39:39.940Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_cache_stats older than 30 days"}
+{"timestamp":"2026-10-05T23:39:39.949Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 xp_audit_log older than 30 days"}
+{"timestamp":"2026-10-05T23:39:39.962Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 compression_run_telemetry older than 30 days"}
+{"timestamp":"2026-10-05T23:39:39.975Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:39:39.984Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 expired ccr_blocks"}
+{"timestamp":"2026-10-05T23:39:39.990Z","level":"info","component":"Cleanup","message":"[Cleanup] Auto-cleanup complete: 0 deleted, 0 errors"}
+{"timestamp":"2026-10-05T23:39:39.998Z","level":"info","component":"Cleanup","message":"[Cleanup] Deleted 0 proxy_logs older than 90 days"}
+{"timestamp":"2026-10-05T23:40:07.861Z","level":"info","component":"ProxyHealth","message":"[ProxyHealth] Starting proxy health scheduler (interval: 600000ms)"}
+{"level":40,"time":"2026-10-05T23:40:11.325Z","service":"omniroute","module":"system/versionCheck","msg":"Latest-version lookup failed via npm CLI, registry HTTP, and GitHub releases — the update banner will not show even if a newer release exists"}

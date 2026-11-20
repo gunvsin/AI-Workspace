@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Second Brain Cognitive OS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/*
+  Design Plan: Obsidian Cognitive OS
+  - Color: Obsidian Dark charcoal (#0F0F0F), panel (#161616), accent (#7A8BFF), ok (#3FA03F), warn (#D9A428), danger (#C95A5A)
+  - Type: Inter (sans), JetBrains Mono (mono/tags)
+  - Layout: Dual-pane split (420px left capture/notes, flex right dashboard/graph/journal)
+*/
+:root {
+  --bg: #0F0F0F;
+  --bg-glow: radial-gradient(circle at 20% 30%, rgba(122,139,255,0.12) 0%, transparent 50%),
+             radial-gradient(circle at 80% 70%, rgba(63,160,63,0.08) 0%, transparent 50%);
+  --panel: #161616;
+  --panel-2: #1F1F1F;
+  --panel-3: #262626;
+  --border: #2C2C2C;
+  --text: #E6E6E6;
+  --muted: #9A9A9A;
+  --subtle: #7A7A7A;
+  --focus: #7A8BFF55;
+  --accent: #7A8BFF;
+  --accent-hover: #6676EE;
+  --ok: #3FA03F;
+  --warn: #D9A428;
+  --danger: #C95A5A;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "SF Mono", Consolas, monospace;
+  --radius: 8px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #F8F9FA;
+    --bg-glow: radial-gradient(circle at 20% 30%, rgba(122,139,255,0.08) 0%, transparent 50%),
+               radial-gradient(circle at 80% 70%, rgba(63,160,63,0.05) 0%, transparent 50%);
+    --panel: #FFFFFF;
+    --panel-2: #F1F3F5;
+    --panel-3: #E9ECEF;
+    --border: #DEE2E6;
+    --text: #212529;
+    --muted: #6C757D;
+    --subtle: #ADB5BD;
+    --accent: #4C6EF5;
+    --accent-hover: #3B5BDB;
+    color-scheme: light;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: #F8F9FA;
+  --bg-glow: radial-gradient(circle at 20% 30%, rgba(122,139,255,0.08) 0%, transparent 50%),
+             radial-gradient(circle at 80% 70%, rgba(63,160,63,0.05) 0%, transparent 50%);
+  --panel: #FFFFFF;
+  --panel-2: #F1F3F5;
+  --panel-3: #E9ECEF;
+  --border: #DEE2E6;
+  --text: #212529;
+  --muted: #6C757D;
+  --subtle: #ADB5BD;
+  --accent: #4C6EF5;
+  --accent-hover: #3B5BDB;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0F0F0F;
+  --bg-glow: radial-gradient(circle at 20% 30%, rgba(122,139,255,0.12) 0%, transparent 50%),
+             radial-gradient(circle at 80% 70%, rgba(63,160,63,0.08) 0%, transparent 50%);
+  --panel: #161616;
+  --panel-2: #1F1F1F;
+  --panel-3: #262626;
+  --border: #2C2C2C;
+  --text: #E6E6E6;
+  --muted: #9A9A9A;
+  --subtle: #7A7A7A;
+  --accent: #7A8BFF;
+  --accent-hover: #6676EE;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body {
+  background: var(--bg);
+  background-image: var(--bg-glow);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  min-height: 100vh;
+  gap: 2px;
+  background: var(--border);
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.pane {
+  background: var(--bg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.pane-left { border-right: 1px solid var(--border); }
+.pane-right { padding: 20px; }
+
+.pane-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 10;
+}
+
+.brand {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.nav { display: flex; gap: 12px; }
+.nav-item {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 13px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-item:hover { color: var(--text); background: var(--panel-2); }
+.nav-item.active { color: var(--accent); background: rgba(122,139,255,0.12); }
+
+.capture { padding: 18px; border-bottom: 1px solid var(--border); }
+.capture form { display: flex; flex-direction: column; gap: 10px; }
+.capture textarea {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 10px 12px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  resize: vertical;
+}
+.capture textarea:focus { outline: none; border-color: var(--accent); }
+
+.btn {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+.btn:hover { background: var(--panel-3); border-color: var(--subtle); }
+.btn-primary { background: var(--accent); color: #fff; border: none; }
+.btn-primary:hover { background: var(--accent-hover); }
+
+.section-title {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.notes, .pinned, .refine-section { padding: 18px; border-bottom: 1px solid var(--border); }
+.notes-list { list-style: none; margin: 0; padding: 0; }
+.note-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--panel-2);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.note-item:last-child { border-bottom: none; }
+.note-item:hover {
+  background: var(--panel-2);
+  margin: 0 -18px;
+  padding: 10px 18px;
+  border-left: 2px solid var(--accent);
+}
+.note-meta { display: flex; gap: 8px; font-size: 11px; color: var(--subtle); margin-bottom: 2px; }
+.note-tags { font-family: var(--font-mono); }
+.note-title { font-size: 13px; color: var(--text); }
+.note-links a { color: var(--accent); text-decoration: none; font-size: 11px; }
+.note-links a:hover { text-decoration: underline; }
+
+/* Dashboard Metrics & Explainers */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.metric {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.1s;
+}
+.metric:hover { border-color: var(--accent); transform: translateY(-1px); }
+.metric h3 { margin: 0 0 6px; font-size: 12px; color: var(--muted); font-weight: 500; }
+.metric .value { font-size: 24px; font-weight: 700; font-family: var(--font-mono); letter-spacing: -0.03em; margin-bottom: 4px; }
+.metric .delta { font-size: 11px; font-weight: 600; font-family: var(--font-mono); }
+.metric .delta.up { color: var(--ok); }
+.metric .delta.down { color: var(--danger); }
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 24px;
+  margin-top: 10px;
+}
+.bars span {
+  flex: 1;
+  background: var(--panel-3);
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+.metric:hover .bars span { background: var(--accent); }
+
+.explainer {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 12px;
+  display: none;
+}
+.explainer.open { display: block; animation: fadeIn 0.2s ease; }
+.explainer h4 { margin: 0 0 6px; font-size: 13px; color: var(--text); }
+.explainer p { margin: 0; font-size: 13px; color: var(--muted); }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Ask workspace */
+.ask, .entity-section, .decision-journal, .pricing {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 20px;
+}
+.ask form { display: flex; gap: 8px; }
+.ask input {
+  flex: 1;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  padding: 10px 12px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+}
+.ask input:focus { outline: none; border-color: var(--accent); }
+.answer {
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: var(--text);
+  padding: 10px;
+  border-radius: 6px;
+  background: var(--panel-2);
+  min-height: 20px;
+}
+.answer.thinking { color: var(--muted); font-style: italic; }
+
+/* Entity Graph */
+.entity-graph {
+  width: 100%;
+  height: 320px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+.entity-canvas { width: 100%; height: 100%; display: block; }
+
+/* Decision Journal */
+.journal-item { border-bottom: 1px solid var(--border); padding-bottom: 12px; margin-bottom: 12px; }
+.journal-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.journal-meta { display: flex; gap: 8px; font-size: 11px; color: var(--subtle); margin-bottom: 4px; }
+.journal-tags { font-family: var(--font-mono); }
+.journal-body { margin: 0; font-size: 13px; color: var(--text); }
+
+/* Pricing / Start */
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.plan {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.plan.featured { border-color: var(--accent); background: rgba(122,139,255,0.04); }
+.plan h3 { margin: 0 0 6px; font-size: 15px; }
+.plan .price { font-size: 22px; font-weight: 700; font-family: var(--font-mono); margin-bottom: 8px; }
+.plan .price span { font-size: 12px; color: var(--muted); font-weight: 400; }
+.plan p { margin: 0 0 16px; font-size: 12px; color: var(--muted); flex: 1; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+</style>
+</head>
+<body>
+
+<div class="layout">
+  <!-- LEFT PANE -->
+  <aside class="pane pane-left" role="region" aria-label="Left panel">
+    <header class="pane-header">
+      <h1 class="brand">Second Brain</h1>
+      <nav class="nav" aria-label="Main">
+        <a href="#" class="nav-item active">Dashboard</a>
+        <a href="#" class="nav-item">Notes</a>
+        <a href="#" class="nav-item">Decisions</a>
+        <a href="#" class="nav-item">Entities</a>
+      </nav>
+    </header>
+
+    <section class="capture" role="region" aria-label="Capture">
+      <h2 class="section-title">Capture Thought</h2>
+      <form id="capture-form">
+        <label for="capture-input" class="sr-only">Capture note</label>
+        <textarea
+          id="capture-input"
+          placeholder="Drop a thought, task, or decision here..."
+          rows="4"
+        ></textarea>
+        <button type="submit" class="btn btn-primary">Add Note</button>
+      </form>
+      <p style="margin: 8px 0 0; font-size: 11px; color: var(--muted);">Local demo mode active. Saved to session.</p>
+    </section>
+
+    <section class="notes">
+      <h2 class="section-title">Recent Notes <span style="font-size:10px;color:var(--muted);font-weight:400">(type · parent · links)</span></h2>
+      <ul id="notes-list" class="notes-list">
+        <li class="note-item">
+          <div class="note-meta"><span class="note-time">2h ago</span><span class="note-tags">#capture</span></div>
+          <div class="note-title">Review ai-workspace setup & vault config</div>
+          <div class="note-links"><a href="#">links to pricing</a></div>
+        </li>
+        <li class="note-item">
+          <div class="note-meta"><span class="note-time">5h ago</span><span class="note-tags">#decision</span></div>
+          <div class="note-title">Bias check on Q4 roadmap delivery</div>
+          <div class="note-links"><a href="#">links to roadmap</a> · <a href="#">links to budget</a></div>
+        </li>
+        <li class="note-item">
+          <div class="note-meta"><span class="note-time">1d ago</span><span class="note-tags">#idea</span></div>
+          <div class="note-title">Split-screen dual-pane Obsidian layout</div>
+          <div class="note-links"><a href="#">links to topics</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="refine-section">
+      <h2 class="section-title">Refine Pipeline (Inbox → Notes)</h2>
+      <div style="padding:10px;border:1px solid var(--border);border-radius:6px;background:var(--panel);font-size:12px;color:var(--muted)">
+        Inbox: <strong>3 raw</strong> → Refined: <strong>2 notes</strong> → Archived: <strong>0</strong>
+        <button onclick="alert('Refinement pipeline executed: 3 raw notes moved to memory vault with backlinks updated.')" class="btn btn-primary" style="margin-top:8px; width:100%; font-size:11px; padding:6px;">Refine all inbox items</button>
+      </div>
+    </section>
+
+    <section class="pinned">
+      <h2 class="section-title">Working Set</h2>
+      <ul class="notes-list">
+        <li class="note-item">
+          <div class="note-meta"><span class="note-time">pinned</span><span class="note-tags">#pricing #sunk-cost</span></div>
+          <div class="note-title">Oct 6 pricing change — validated (+12% rev)</div>
+        </li>
+        <li class="note-item">
+          <div class="note-meta"><span class="note-time">pinned</span><span class="note-tags">#hiring #blocker</span></div>
+          <div class="note-title">Hiring bottleneck delays Q4 feature release</div>
+        </li>
+      </ul>
+    </section>
+  </aside>
+
+  <!-- RIGHT PANE -->
+  <main class="pane pane-right" role="region" aria-label="Dashboard">
+    <header class="pane-header">
+      <h1 class="brand">Cognitive Dashboard</h1>
+      <div style="font-size: 11px; font-family: var(--font-mono); color: var(--ok); background: rgba(63,160,63,0.1); padding: 3px 8px; border-radius: 4px;" id="status">obsidian live</div>
+    </header>
+
+    <section class="metrics" id="metrics">
+      <div class="metric" onclick="toggleExp('rev')">
+        <h3>Revenue</h3>
+        <div class="value">$48.2k</div>
+        <div class="delta up">+12.4%</div>
+        <div class="bars"><span style="height:30%"></span><span style="height:45%"></span><span style="height:35%"></span><span style="height:55%"></span><span style="height:65%"></span><span style="height:60%"></span><span style="height:80%"></span><span style="height:75%"></span><span style="height:95%"></span><span style="height:90%"></span><span style="height:100%"></span></div>
+      </div>
+      <div class="metric" onclick="toggleExp('users')">
+        <h3>Active Users</h3>
+        <div class="value">3,142</div>
+        <div class="delta up">+3.1%</div>
+        <div class="bars"><span style="height:50%"></span><span style="height:55%"></span><span style="height:52%"></span><span style="height:60%"></span><span style="height:58%"></span><span style="height:65%"></span><span style="height:62%"></span><span style="height:68%"></span><span style="height:65%"></span><span style="height:70%"></span><span style="height:72%"></span></div>
+      </div>
+      <div class="metric" onclick="toggleExp('churn')">
+        <h3>Churn Rate</h3>
+        <div class="value">1.9%</div>
+        <div class="delta up">-0.4%</div>
+        <div class="bars"><span style="height:80%"></span><span style="height:75%"></span><span style="height:78%"></span><span style="height:68%"></span><span style="height:65%"></span><span style="height:62%"></span><span style="height:58%"></span><span style="height:60%"></span><span style="height:55%"></span><span style="height:52%"></span><span style="height:50%"></span></div>
+      </div>
+      <div class="metric" onclick="toggleExp('latency')">
+        <h3>P95 Latency</h3>
+        <div class="value">212ms</div>
+        <div class="delta down">+18ms</div>
+        <div class="bars"><span style="height:25%"></span><span style="height:28%"></span><span style="height:30%"></span><span style="height:28%"></span><span style="height:35%"></span><span style="height:45%"></span><span style="height:40%"></span><span style="height:50%"></span><span style="height:60%"></span><span style="height:55%"></span><span style="height:70%"></span></div>
+      </div>
+    </section>
+
+    <div class="explainer" id="exp-rev">
+      <h4>Revenue — why?</h4>
+      <p>Revenue climbed 12.4% over 30 days. The steepest gain followed the Oct 6 pricing change; volume held steady, confirming price-driven lift rather than traffic surge.</p>
+    </div>
+    <div class="explainer" id="exp-users">
+      <h4>Active Users — why?</h4>
+      <p>Active users grew 3.1% organically with weekday peaks at 10:00 UTC. No paid campaigns ran in this window.</p>
+    </div>
+    <div class="explainer" id="exp-churn">
+      <h4>Churn Rate — why?</h4>
+      <p>Churn fell 0.4pt to 1.9%. Win-back emails sent on Oct 3 successfully retained price-sensitive accounts.</p>
+    </div>
+    <div class="explainer" id="exp-latency">
+      <h4>P95 Latency — why?</h4>
+      <p>Latency increased after the 14:00 deploy as cache hit-rates dropped from 91% to 84% on the new query path.</p>
+    </div>
+
+    <section class="ask">
+      <h2 class="section-title">Ask the Workspace</h2>
+      <form id="ask-form">
+        <input id="ask-input" type="text" placeholder="e.g. Why did revenue spike on Oct 6?" autocomplete="off" />
+        <button type="submit" class="btn btn-primary">Explain</button>
+      </form>
+      <div class="answer" id="answer">Type a question above or click any metric card to inspect reasoning.</div>
+    </section>
+
+    <section class="entity-section">
+      <h2 class="section-title">Entity Graph (Force-Directed)</h2>
+      <div class="entity-graph">
+        <canvas id="entity-canvas" class="entity-canvas"></canvas>
+      </div>
+      <p style="margin: 8px 0 0; font-size: 11px; color: var(--muted);">Visualizing nodes (People, Budgets, Blockers, Projects) and bi-directional relationships.</p>
+    </section>
+
+    <section class="decision-journal">
+      <h2 class="section-title">Decision Journal</h2>
+      <div class="journal-item">
+        <div class="journal-meta"><span class="journal-date">Oct 16, 2026</span><span class="journal-tags">#pricing #sunk-cost</span></div>
+        <p class="journal-body">Proceeded with Oct 6 pricing change despite early churn risk. Checked: Is revenue pressure real or sunk-cost bias? Revenue +12%, churn flat — validated.</p>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <h2 class="section-title">Get Started with Second Brain</h2>
+      <div class="pricing-grid">
+        <div class="plan">
+          <h3>Self-Hosted</h3>
+          <div class="price">$0</div>
+          <p>Docker + Postgres + Ollama. Local-first privacy, your data & keys.</p>
+          <a class="btn" href="https://github.com/gunvsin/AI-Workspace" target="_blank" rel="noopener">Get the Repo</a>
+        </div>
+        <div class="plan featured">
+          <h3>Managed Solo</h3>
+          <div class="price">$29<span>/mo</span></div>
+          <p>Fully hosted cloud cognitive OS, flat fee without credit metering.</p>
+          <a class="btn btn-primary" href="mailto:you@example.com?subject=Managed%20Solo%20Access">Request Access</a>
+        </div>
+        <div class="plan">
+          <h3>Team Vault</h3>
+          <div class="price">$99<span>/mo</span></div>
+          <p>Up to 10 seats, shared entity graph & collaborative memory layer.</p>
+          <a class="btn" href="mailto:you@example.com?subject=Team%20Plan">Contact Sales</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+// Metric Explainer Toggles
+function toggleExp(id) {
+  ['rev', 'users', 'churn', 'latency'].forEach(function(k) {
+    var el = document.getElementById('exp-' + k);
+    if (el) el.classList.toggle('open', k === id && !el.classList.contains('open'));
+  });
+}
+
+// Ask Workspace Demo
+document.getElementById('ask-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var input = document.getElementById('ask-input');
+  var answer = document.getElementById('answer');
+  var q = input.value.trim();
+  if (!q) return;
+  answer.className = 'answer thinking';
+  answer.textContent = 'Analyzing workspace memory & entity graph...';
+  setTimeout(function() {
+    answer.className = 'answer';
+    answer.textContent = 'Analysis for "' + q + '": Linked directly to Oct 6 pricing migration note and Q4 budget entity. Revenue impact was +12.4% with zero net churn increase. Confidence: High.';
+  }, 600);
+});
+
+// Demo Note Capture
+document.getElementById('capture-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var textarea = document.getElementById('capture-input');
+  var text = textarea.value.trim();
+  if (!text) return;
+  var list = document.getElementById('notes-list');
+  var li = document.createElement('li');
+  li.className = 'note-item';
+  li.innerHTML = '<div class="note-meta"><span class="note-time">just now</span><span class="note-tags">#capture</span></div>' +
+                 '<div class="note-title">' + text.replace(/</g, '&lt;') + '</div>' +
+                 '<div class="note-links"><a href="#">links to inbox</a></div>';
+  list.insertBefore(li, list.firstChild);
+  textarea.value = '';
+});
+
+// Force-Directed Entity Graph Canvas
+(function() {
+  var canvas = document.getElementById('entity-canvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+
+  function resize() {
+    canvas.width = canvas.clientWidth || 600;
+    canvas.height = canvas.clientHeight || 320;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  var nodes = [
+    { id: "user", label: "You", kind: "person", x: 150, y: 120, vx: 0, vy: 0, r: 18 },
+    { id: "brain", label: "Vault", kind: "topic", x: 300, y: 80, vx: 0, vy: 0, r: 16 },
+    { id: "budget", label: "Q4 Budget", kind: "budget", x: 220, y: 220, vx: 0, vy: 0, r: 18 },
+    { id: "roadmap", label: "Roadmap", kind: "project", x: 400, y: 180, vx: 0, vy: 0, r: 18 },
+    { id: "hiring", label: "Hiring", kind: "blocker", x: 100, y: 250, vx: 0, vy: 0, r: 16 },
+    { id: "pricing", label: "Pricing", kind: "project", x: 480, y: 90, vx: 0, vy: 0, r: 18 }
+  ];
+
+  var links = [
+    { source: nodes[0], target: nodes[1], type: "owns" },
+    { source: nodes[0], target: nodes[2], type: "manages" },
+    { source: nodes[2], target: nodes[3], type: "funds" },
+    { source: nodes[4], target: nodes[3], type: "blocks" },
+    { source: nodes[5], target: nodes[3], type: "affects" }
+  ];
+
+  var kindColor = {
+    person: "#7A8BFF",
+    budget: "#3FA03F",
+    project: "#D9A428",
+    blocker: "#C95A5A",
+    topic: "#8A8A8A"
+  };
+
+  function loop() {
+    var W = canvas.width;
+    var H = canvas.height;
+
+    // simple physics tick
+    for (var i = 0; i < nodes.length; i++) {
+      for (var j = i + 1; j < nodes.length; j++) {
+        var dx = nodes[i].x - nodes[j].x;
+        var dy = nodes[i].y - nodes[j].y;
+        var d = Math.sqrt(dx * dx + dy * dy) || 1;
+        var f = 1200 / (d * d);
+        nodes[i].vx += (dx / d) * f;
+        nodes[i].vy += (dy / d) * f;
+        nodes[j].vx -= (dx / d) * f;
+        nodes[j].vy -= (dy / d) * f;
+      }
+    }
+    links.forEach(function(l) {
+      var dx = l.target.x - l.source.x;
+      var dy = l.target.y - l.source.y;
+      var d = Math.sqrt(dx * dx + dy * dy) || 1;
+      var f = (d - 110) * 0.03;
+      l.source.vx += (dx / d) * f;
+      l.source.vy += (dy / d) * f;
+      l.target.vx -= (dx / d) * f;
+      l.target.vy -= (dy / d) * f;
+    });
+    nodes.forEach(function(n) {
+      n.vx += (W / 2 - n.x) * 0.005;
+      n.vy += (H / 2 - n.y) * 0.005;
+      n.vx *= 0.85; n.vy *= 0.85;
+      n.x += n.vx; n.y += n.vy;
+      // boundary constraint
+      n.x = Math.max(30, Math.min(W - 30, n.x));
+      n.y = Math.max(30, Math.min(H - 30, n.y));
+    });
+
+    // render
+    ctx.clearRect(0, 0, W, H);
+    ctx.lineWidth = 1;
+    ctx.font = "10px 'JetBrains Mono', monospace";
+
+    links.forEach(function(l) {
+      ctx.strokeStyle = "#333333";
+      ctx.beginPath();
+      ctx.moveTo(l.source.x, l.source.y);
+      ctx.lineTo(l.target.x, l.target.y);
+      ctx.stroke();
+      var mx = (l.source.x + l.target.x) / 2;
+      var my = (l.source.y + l.target.y) / 2;
+      ctx.fillStyle = "#777777";
+      ctx.fillText(l.type, mx + 4, my - 2);
+    });
+
+    nodes.forEach(function(n) {
+      ctx.fillStyle = kindColor[n.kind] || "#8A8A8A";
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "#E6E6E6";
+      ctx.textAlign = "center";
+      ctx.fillText(n.label, n.x, n.y + 4);
+    });
+
+    requestAnimationFrame(loop);
+  }
+  loop();
+})();
+</script>
+</body>
+</html>

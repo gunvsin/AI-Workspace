@@ -1,10 +1,154 @@
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
+
 services:
-  # ?? OmniRoute Service Only
+  # 1. Native Ollama Engine Service
+  ollama:
+    image: ollama/ollama:latest
+    container_name: ollama
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    ports:
+      - "127.0.0.1:11434:11434"
+    volumes:
+      - ollama_storage:/root/.ollama
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    logging: *default-logging
+
+  # 2. OmniRoute Mesh Orchestrator Service
   omniroute:
     image: diegosouzapw/omniroute:latest
-    container_name: omniroute-core
-    ports:
-      - "20128:20128"
-    extra_hosts:
-      - "host.docker.internal:host-gateway" # Maps the Windows host to Docker
+    container_name: omniroute
     restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    ports:
+      - "127.0.0.1:20128:20128"
+    depends_on:
+      ollama:
+        condition: service_healthy
+    volumes:
+      - ./workspace/data:/app/data
+    environment:
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - PROVIDERS_OLLAMA_BASE_URL=http://ollama:11434
+      - OLLAMA_ENABLED=true
+      - PROVIDERS_OLLAMA_ENABLED=true
+      - CUSTOM_PROVIDERS_ENABLED=true
+      - AUTO_DISCOVER_PROVIDERS=true
+      - STORAGE_ENCRYPTION_ENABLED=false
+      - DISABLE_STORAGE_ENCRYPTION=true
+      - INITIAL_PASSWORD=MySecurePassword2026
+      - OMNIROUTE_INIT_PASSWORD=MySecurePassword2026
+    logging: *default-logging
+
+  # 3. FreeLLMAPI Gateway
+  freellmapi:
+    image: ghcr.io/tashfeenahmed/freellmapi:latest
+    container_name: freellmapi
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    ports:
+      - "127.0.0.1:3001:3001"
+    environment:
+      - ENCRYPTION_KEY=${ENCRYPTION_KEY:-0b92b6069280d20a3c78c14c22a61bcba185e0ae9a83606b96764856aa27751f}
+    logging: *default-logging
+
+  # 4. 9router Proxy Mesh
+  9router:
+    image: decolua/9router:latest
+    container_name: 9router
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    ports:
+      - "127.0.0.1:20129:20128"
+    depends_on:
+      - omniroute
+    logging: *default-logging
+
+  # 5. Laya English Decision Model Runner / Agent
+  laya-en:
+    image: ollama/ollama:latest
+    container_name: laya-en-runner
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    ports:
+      - "127.0.0.1:11436:11434"
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      - OLLAMA_MODELS=/root/.ollama
+    volumes:
+      - ollama_storage:/root/.ollama
+    command: ["serve"]
+    logging: *default-logging
+
+  # 6. Laya Multilingual Decision Model Runner / Agent
+  laya-multilingual:
+    image: ollama/ollama:latest
+    container_name: laya-multilingual-runner
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    ports:
+      - "127.0.0.1:11437:11434"
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      - OLLAMA_MODELS=/root/.ollama
+    volumes:
+      - ollama_storage:/root/.ollama
+    command: ["serve"]
+    logging: *default-logging
+
+  # 7. Nimble Decision Model Runner / Agent
+  nimble-decision:
+    image: ollama/ollama:latest
+    container_name: nimble-decision-runner
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    ports:
+      - "127.0.0.1:11438:11434"
+    depends_on:
+      ollama:
+        condition: service_healthy
+    environment:
+      - OLLAMA_MODELS=/root/.ollama
+    volumes:
+      - ollama_storage:/root/.ollama
+    command: ["serve"]
+    logging: *default-logging
+
+  # 8. Watchtower - Automated Container Auto-Update Companion
+  watchtower:
+    image: containrrr/watchtower:latest
+    ports:
+      - "127.0.0.1:20128:20128"
+    container_name: autocode-watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DOCKER_API_VERSION=1.44
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_POLL_INTERVAL=300
+      - WATCHTOWER_LABEL_ENABLE=true
+    logging: *default-logging
+
+volumes:
+  ollama_storage:
+    external: true

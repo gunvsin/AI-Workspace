@@ -1,0 +1,1 @@
+.backlink { color: var(--accent); text-decoration: none; font-family: var(--font-mono); font-size: 11px; border-bottom: 1px solid rgba(122,139,255,0.3); transition: color .2s; } .backlink:hover { color: #fff; border-bottom-color: var(--accent); }
