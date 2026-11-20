@@ -2,7 +2,19 @@
   "skipWorkflowUsageWarning": true,
   "inheritGlobal": "C:\\Users\\gunvs\\.claude\\settings.json",
   "projectName": "antigravity",
-  "defaultSkills": ["code-review", "peer-review", "simplify", "loop", "run"],
+  "defaultSkills": ["code-review", "peer-review", "simplify", "loop", "run", "ponytail-review", "ponytail-audit"],
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "Skill(ponytail-review)",
+      "Skill(ponytail-audit)",
+      "Skill(code-review)",
+      "Skill(peer-review)",
+      "Bash(docker ps:*)",
+      "Bash(docker logs:*)",
+      "Bash(docker inspect:*)"
+    ]
+  },
   "motionEnabled": true,
   "knowledgeBase": {"enabled": true, "sourceDirectories": [".", "my-business-brain", "templates"]},
   "backupDir": "/tmp",
