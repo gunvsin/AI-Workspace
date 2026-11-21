@@ -26,7 +26,7 @@ services:
       - "5432:5432"
     volumes:
       - db-data:/var/lib/postgresql/data
-      - ./workspace/db/init:/docker-entrypoint-initdb.d:ro
+      - ./db/init:/docker-entrypoint-initdb.d:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U brain -d business_brain"]
       interval: 10s

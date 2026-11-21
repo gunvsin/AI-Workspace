@@ -36,7 +36,7 @@ services:
       ollama:
         condition: service_healthy
     volumes:
-      - ./workspace/data:/app/data
+      - ./data:/app/data
     environment:
       - OLLAMA_BASE_URL=http://ollama:11434
       - PROVIDERS_OLLAMA_BASE_URL=http://ollama:11434
